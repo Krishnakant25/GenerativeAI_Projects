@@ -52,3 +52,6 @@ duckduckgo_search>=6.0.0
 # --- Notebook ---
 ipykernel>=6.29.0
 jupyter>=1.0.0
+
+# --- App Deployment ---
+streamlit>=1.35.0

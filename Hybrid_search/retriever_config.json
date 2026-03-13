@@ -1,0 +1,8 @@
+{
+  "index_name": "financial-hybrid-search",
+  "bm25_path": "bm25_financial.json",
+  "model_name": "all-MiniLM-L6-v2",
+  "default_alpha": 0.5,
+  "top_k": 5,
+  "total_chunks": 2195
+}
