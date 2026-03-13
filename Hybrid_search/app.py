@@ -25,7 +25,9 @@ PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 HF_TOKEN         = os.getenv("HF_TOKEN")
 os.environ["HF_TOKEN"] = HF_TOKEN
 
-with open("retriever_config.json") as f:
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+with open(os.path.join(BASE_DIR, "retriever_config.json")) as f:
     CONFIG = json.load(f)
 
 # ── Cache retriever (loads once, reused across queries) ───────
@@ -36,7 +38,7 @@ def load_retriever():
         model_kwargs={"device": "cpu"},
         encode_kwargs={"normalize_embeddings": True},
     )
-    bm25 = BM25Encoder().load(CONFIG["bm25_path"])
+    bm25 = BM25Encoder().load(os.path.join(BASE_DIR, CONFIG["bm25_path"]))
     pc   = Pinecone(api_key=PINECONE_API_KEY)
     idx  = pc.Index(CONFIG["index_name"])
     return PineconeHybridSearchRetriever(
