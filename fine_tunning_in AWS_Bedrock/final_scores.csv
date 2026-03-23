@@ -1,0 +1,410 @@
+question,ground_truth,base_answer,bedrock_answer,ft_answer,base_correctness,bedrock_correctness,ft_correctness,base_relevancy,bedrock_relevancy,ft_relevancy,base_latency_ms,bedrock_latency_ms,ft_latency_ms
+"Based on the information provided primarily in the balance sheet and the statement of income, what is FY2020 days payable outstanding (DPO) for Corning? DPO is defined as: 365 * (average accounts payable between FY2019 and FY2020) / (FY2020 COGS + change in inventory between FY2019 and FY2020). Round your answer to two decimal places.",63.86,"I don't have direct access to Corning's financial statements. However, I can guide you through the steps to calculate DPO based on general financial analysis principles.
+
+To calculate DPO, we'll need to make some assumptions and use publicly available data. Let's assume we have the following information:
+
+* FY2019 accounts payable (AP) and COGS (Cost of Goods Sold) for Corning:
+	+ FY2019 AP: $X (we'll use a hypothetical value for demonstration purposes)
+	+ FY2019 COGS: $Y (we'll use a hypothetical value for demonstration purposes)
+* FY2020 AP and COGS for Corning:
+	+ FY2020 AP: $Z (we'll use a hypothetical","To calculate the FY2020 Days Payable Outstanding (DPO) for Corning, we need to gather the necessary information from the balance sheet and the statement of income.
+
+From the balance sheet, we can find the following information:
+
+- FY2019 Accounts Payable: $1,433,000,000 (Note: This figure is not explicitly stated in the provided information, but it can be found in Corning's FY2019 annual report)
+- FY2020 Accounts Payable: $1,544,000,000 (Note: This figure is not explicitly stated in the provided information, but it can be found in Corning's FY2020 annual report)
+
+From the statement of income, we can find the following information:",0.00,0.0,0.0,0.0,0.3,0.5,0.1,20469,2957,974
+Does Foot Locker's new CEO have previous CEO experience in a similar company to Footlocker?,Yes. She was previous CEO of Ulta Beauty which means she had to manage a large retail company that has brick and mortar + online business. So yes she was a CEO in a similar company to Foot Locker before this.,"I couldn't find any information on a new CEO of Foot Locker. However, I can provide information on the current CEO of Foot Locker, Michael J. Collins, and his background.
+
+Michael J. Collins has been the CEO of Foot Locker since 2017. Prior to joining Foot Locker, Collins was the CEO of Finish Line, a similar athletic footwear and apparel retailer, from 2014 to 2017. During his tenure at Finish Line, Collins led the company's efforts to transform its business and improve its financial performance.
+
+Collins has also held leadership positions at other companies, including his role as President of the Finish Line's e-commerce business and as a member of the company's Board of Directors.
+
+While Collins does not have direct experience","I don't have real-time access to the latest information on Foot Locker's CEO. However, I can suggest some possible sources where you can find this information.
+
+As of my knowledge cutoff in 2023, Steve Smith was the CEO of Foot Locker. However, I couldn't find any information on whether he had previous CEO experience in a similar company.
+
+If you're looking for the most up-to-date information, I recommend checking Foot Locker's investor relations website, news articles, or financial reports for the latest information on their CEO's background and experience.
+
+Alternatively, you can also try searching online for news articles or press releases from Foot Locker or reputable financial news sources that may have information on their new CEO's background and experience.","Yes, the new CEO of Foot Locker has previous CEO experience in a similar company to Foot Locker.",0.0,0.2,1.0,0.2,0.3,1.0,17728,3194,2475
+"For Pfizer, which geographic region had the biggest drop in Q22023 year over year revenues (on a percentage basis)?",Developed Rest of the World,"I'm unable to provide real-time or future financial data, including Q2 2023 financial results for Pfizer. However, I can suggest some alternatives to find the information you're looking for:
+
+1. **Pfizer's Investor Relations Website**: You can visit Pfizer's investor relations website to access their latest quarterly earnings reports and financial statements.
+2. **Financial News Websites**: Websites like Bloomberg, Reuters, or CNBC often publish financial news and analysis, including earnings reports and market data.
+3. **SEC Filings**: The U.S. Securities and Exchange Commission (SEC) website provides access to publicly traded companies' financial statements and other filings, including quarterly earnings reports.
+
+If you provide me with the actual Q2 2023 financial results for","I don't have direct access to Pfizer's Q22023 year-over-year revenue data. However, I can suggest some possible sources where you may be able to find this information:
+
+1. Pfizer's official investor relations website: You can check Pfizer's website for their quarterly earnings reports and financial statements, which may include year-over-year revenue data.
+2. Bloomberg or Thomson Reuters: These financial news providers often publish financial data and analysis, including year-over-year revenue comparisons for publicly traded companies like Pfizer.
+3. FactSet or Yahoo Finance: These websites provide financial data and analysis, including revenue data for publicly traded companies.
+
+If you can provide me with the specific data or a link to the source, I can try to help you analyze it and answer",North America,0.0,0.0,0.0,0.2,0.2,0.5,17870,3187,387
+"What drove operating margin change as of FY2022 for 3M? If operating margin is not a useful metric for a company like this, then please state that and explain why.","Operating Margin for 3M in FY2022 has decreased by 1.7% primarily due to: 
+-Decrease in gross Margin
+-mostly one-off charges including Combat Arms Earplugs litigation, impairment related to exiting PFAS manufacturing, costs related to exiting Russia and divestiture-related restructuring
+charges","According to 3M's FY2022 Annual Report (Form 10-K), the company reported a significant increase in operating margin.
+
+As of FY2022, 3M's operating margin increased from 18.3% in FY2021 to 21.4% in FY2022. This represents a $1.1 billion increase in operating margin, or 4.6% year-over-year.
+
+The main drivers of this increase in operating margin were:
+
+1. **Price increases**: 3M implemented price increases across various product lines, particularly in the industrial and consumer segments, which contributed to the growth in operating margin.
+2. **Cost savings**: The company achieved cost savings through various initiatives, such as process improvements and restructuring","As of FY2022, 3M's operating margin decreased from 25.3% in FY2021 to 22.1%. 
+
+According to 3M's FY2022 earnings report, the main drivers of the decline in operating margin were:
+
+1. Higher costs associated with supply chain disruptions and inflation, which led to increased expenses for raw materials and labor.
+2. Increased investments in research and development (R&D) to support the company's growth strategy, particularly in emerging technologies such as 5G and the Internet of Things (IoT).
+3. Higher marketing and sales expenses to support the launch of new products and expand the company's presence in emerging markets.
+
+Regarding the usefulness of operating margin as a metric for a company",Operating margin decreased by 1.2% as of FY2022. This is primarily due to the impact of the COVID-19 pandemic on the company's business.,0.0,0.4,0.0,0.0,0.6,0.2,18360,3217,4260
+What is the FY2022 unadjusted EBITDA less capex for PepsiCo? Define unadjusted EBITDA as unadjusted operating income + depreciation and amortization [from cash flow statement]. Answer in USD millions. Respond to the question by assuming the perspective of an investment analyst who can only use the details shown within the statement of cash flows and the income statement.,$9068.00,"To calculate the FY2022 unadjusted EBITDA less capex for PepsiCo, I will use the information provided in the statement of cash flows and the income statement.
+
+From the statement of cash flows, I can see that the net cash provided by operating activities is $4,433 million. This includes net income of $3,434 million, which is the unadjusted operating income.
+
+From the income statement, I can see that the unadjusted operating income is $3,434 million.
+
+From the statement of cash flows, I can also see that depreciation and amortization expense is $1,199 million.
+
+Therefore, unadjusted EBITDA is unadjusted operating income + depreciation and amortization = $3,434 million + $1","To calculate the FY2022 unadjusted EBITDA less capex for PepsiCo, I'll use the information provided in the statement of cash flows and the income statement.
+
+From the statement of cash flows, I can find the depreciation and amortization from the cash flow statement. According to the 2022 PepsiCo Annual Report, the depreciation and amortization from the cash flow statement is $1,433 million.
+
+From the income statement, I can find the operating income. According to the 2022 PepsiCo Annual Report, the operating income is $7,444 million.
+
+Now, I can calculate the unadjusted EBITDA by adding the operating income and depreciation and amortization:
+
+Unadjusted EBITDA = Operating Income + Deprec","$1,341",0.5,0.9,0.0,0.7,0.85,0.1,18545,3210,613
+What are the geographies that Pepsico primarily operates in as of FY2022?,"As of FY2022, Pepsico primarily operates in the following geographies: North America, Latin America, Europe, Africa, Middle East, South Asia, Asia Pacific, Australia, New Zealand and China.","As of FY2022, PepsiCo, Inc. operates in several geographies, which are primarily:
+
+1. **North America**: This includes the United States, Canada, and Mexico, where PepsiCo has a significant presence in the beverage, snack, and food businesses.
+2. **Europe**: PepsiCo operates in various European countries, including the United Kingdom, Germany, France, Italy, and others, where it has a diverse portfolio of brands and products.
+3. **Asia, Middle East, and Africa (AMEA)**: This region includes countries such as China, India, Japan, and others, where PepsiCo has a strong presence in the beverage, snack, and food businesses.
+4. **Latin America**: PepsiCo operates in","As of FY2022, Pepsico primarily operates in the following geographies:
+
+1. North America: This includes the United States, Canada, and Mexico.
+2. Latin America: This includes countries such as Brazil, Mexico, and other countries in Central and South America.
+3. Europe: This includes countries such as the United Kingdom, Germany, France, and other countries in Western Europe.
+4. Asia, Africa and Middle East (AAME): This includes countries such as China, India, Japan, and other countries in Asia, Africa, and the Middle East.
+
+These geographies are based on Pepsico's FY2022 annual report and may be subject to change over time due to various market and business factors.","Pepsico primarily operates in the following geographies as of FY2022: North America, Europe, Latin America, and Asia.",0.85,0.85,0.6,0.9,0.9,0.8,17940,3013,3799
+What is the FY2019 cash conversion cycle (CCC) for General Mills? CCC is defined as: DIO + DSO - DPO. DIO is defined as: 365 * (average inventory between FY2018 and FY2019) / (FY2019 COGS). DSO is defined as: 365 * (average accounts receivable between FY2018 and FY2019) / (FY2019 Revenue). DPO is defined as: 365 * (average accounts payable between FY2018 and FY2019) / (FY2019 COGS + change in inventory between FY2018 and FY2019). Round your answer to two decimal places. Address the question by using the line items and information shown within the income statement and the balance sheet.,-3.7,"To calculate the FY2019 cash conversion cycle (CCC) for General Mills, we need to calculate the three components: DIO, DSO, and DPO.
+
+**DIO (Days Inventory Outstanding)**
+
+DIO is defined as: 365 * (average inventory between FY2018 and FY2019) / (FY2019 COGS)
+
+From the income statement, we can find the COGS for FY2019:
+COGS = $13,444,000,000 (Line item 3 on the income statement)
+
+We also need to find the average inventory between FY2018 and FY2019. We can do this by finding the beginning and ending inventory for each year and taking the average.
+
+Beginning inventory (FY201","To calculate the FY2019 cash conversion cycle (CCC) for General Mills, we need to gather the necessary information from the income statement and balance sheet.
+
+From the income statement, we have the following information:
+
+- COGS (Cost of Goods Sold) for FY2019: $13,444,000,000
+- Revenue for FY2019: $15,796,000,000
+
+From the balance sheet, we have the following information:
+
+- Average accounts receivable between FY2018 and FY2019: $1,433,000,000
+- Average accounts payable between FY2018 and FY2019: $1,234,000,000
+- Inventory between FY2018 and FY2019: $1",0.00,0.0,0.0,0.0,0.5,0.5,0.5,22658,2975,649
+Has MGM Resorts paid dividends to common shareholders in FY2022?,Yes. MGM maintained 0.01$ per share annual dividend through out FY 2022.,"I'm unable to provide real-time or the most current information, but I can tell you that MGM Resorts International's (MGM) most recent annual report (10-K) for the fiscal year 2022 was filed with the Securities and Exchange Commission (SEC) on February 28, 2023.
+
+According to the 10-K filing, MGM Resorts International did pay dividends to common shareholders in FY2022. The total dividend paid to common shareholders for the fiscal year 2022 was $0.25 per share, which is a 25% increase from the previous year.
+
+Please note that this information is based on the publicly available data and may not reflect any subsequent dividend payments or changes in the company's dividend policy.","I don't have real-time access to current financial data. However, I can suggest some possible sources where you can find the information about MGM Resorts' dividend payments in FY2022.
+
+You can check MGM Resorts' official investor relations website or financial reports for FY2022. Their annual report (Form 10-K) for FY2022 should include information about their dividend payments.
+
+Alternatively, you can also check financial databases such as Bloomberg, Thomson Reuters, or Yahoo Finance, which provide access to historical financial data, including dividend payments.
+
+If you provide me with the information from these sources, I can help you verify the answer.","Yes, MGM Resorts paid dividends to common shareholders in FY2022.",0.5,0.0,0.8,0.8,0.5,0.9,17595,2581,2132
+Did Pfizer grow its PPNE between FY20 and FY21?,"Yes, change in PPNE was positive year over year","I don't have access to real-time data or specific financial reports for Pfizer's PP&E (Property, Plant, and Equipment) for the years 2020 and 2021. However, I can suggest some possible sources where you can find this information:
+
+1. Pfizer's annual reports (10-K) filed with the Securities and Exchange Commission (SEC) for the years 2020 and 2021.
+2. Pfizer's quarterly earnings reports (10-Q) filed with the SEC for the years 2020 and 2021.
+3. Pfizer's investor relations website, which may provide access to historical financial data and presentations.
+
+If you provide me with the actual data from these sources, I can help you analyze the growth of Pfizer's",I'm unable to verify the growth of Pfizer's PPNE between FY20 and FY21.,"Yes, Pfizer's PPNE grew from $2.8 billion in FY20 to $3.4 billion in FY21.",0.0,0.0,1.0,0.3,0.2,1.0,18476,637,3272
+What drove revenue change as of the FY22 for AMD?,"In 2022, AMD reported Higher sales of their EPYC server processors, higher semi-custom product sales, and the inclusion of Xilinx embedded product sales","As of the latest available data, AMD (Advanced Micro Devices, Inc.) reported its FY22 (fiscal year 2022) earnings and financial results. According to the AMD FY22 Annual Report (Form 10-K), the company's revenue for the fiscal year ended January 28, 2022, was $22.9 billion, which represents a 32% increase from the previous year's revenue of $17.4 billion.
+
+The main drivers of this revenue growth were:
+
+1. **Growth in the CPU and GPU segments**: AMD's CPU and GPU businesses experienced significant growth, driven by strong demand for its Ryzen and EPYC processors, as well as its Radeon graphics cards.
+2. **Increased sales of Ryzen 700","As of my knowledge cutoff in December 2023, AMD's (Advanced Micro Devices) FY22 revenue change can be attributed to several factors. 
+
+According to AMD's FY22 earnings report, the company reported a 34% year-over-year increase in revenue, reaching $23.9 billion. This significant growth can be attributed to several key factors:
+
+1. **Strong Demand for EPYC and EPYC 7003 Processors**: AMD's EPYC and EPYC 7003 processors, which are designed for datacenter and cloud computing, saw a significant increase in demand, driving revenue growth.
+2. **Growth in Gaming and Graphics Segment**: AMD's gaming and graphics segment, which includes its Radeon RX 6000 series and Radeon",AMD's revenue increased by 32% in FY22.,0.8,0.8,0.3,0.75,0.85,0.4,17751,3130,1568
+What is the FY2022 unadjusted EBITDA % margin for PepsiCo? Calculate unadjusted EBITDA using unadjusted operating income and D&A (from cash flow statement). Give a response to the question by relying on the details shown in the statement of cash flows and the P&L statement.,16.5%,"To calculate the FY2022 unadjusted EBITDA % margin for PepsiCo, I'll need to refer to the company's financial statements.
+
+According to the PepsiCo 2022 Annual Report (Form 10-K), the statement of cash flows and the income statement are as follows:
+
+**Statement of Cash Flows (2022)**
+
+* Net income (unadjusted) $14,433,000,000
+* Depreciation and Amortization (D&A) $1,433,000,000
+
+**Income Statement (2022)**
+
+* Net Sales $70,846,000,000
+* Cost of Goods Sold $43,419,000,000
+* Gross Profit $27,427,000,","To calculate the FY2022 unadjusted EBITDA % margin for PepsiCo, we need to follow these steps:
+
+1. Obtain the unadjusted operating income from the P&L statement.
+2. Obtain the depreciation and amortization (D&A) from the cash flow statement.
+3. Calculate the unadjusted EBITDA by adding the unadjusted operating income and D&A.
+
+According to the PepsiCo FY2022 10-K report, the unadjusted operating income is $14.8 billion.
+According to the PepsiCo FY2022 10-K report, the D&A is $3.4 billion.
+
+Now, let's calculate the unadjusted EBITDA:
+
+Unadjusted EBITDA = Unadjusted Operating Income + D&A",0.43%,0.0,1.0,0.0,0.5,1.0,0.2,18944,3120,586
+"If we exclude the impact of M&A, which segment has dragged down 3M's overall growth in 2022?",The consumer segment shrunk by 0.9% organically.,"I don't have access to real-time data or specific financial reports for 3M. However, I can suggest some possible ways to find the answer.
+
+3M is a large multinational conglomerate with multiple business segments, including:
+
+1. Industrial segment (e.g., adhesives, abrasives, and other specialty chemicals)
+2. Health Care segment (e.g., medical devices, pharmaceuticals, and medical supplies)
+3. Consumer Goods segment (e.g., household products, such as Post-it Notes and Scotch-Brite)
+4. Electronics and Energy segment (e.g., electronics, energy storage, and other energy-related products)
+
+To determine which segment has dragged down 3M's overall growth in 2022, excluding the impact of","I'm not aware of the specific financial data for 3M in 2022. However, I can suggest some possible sources where you can find this information.
+
+3M's annual reports and quarterly earnings releases typically provide detailed segment performance data. You can check their official website (3m.com) or financial databases such as Bloomberg, Thomson Reuters, or Yahoo Finance for the required information.
+
+If you provide me with the actual data or a link to the relevant financial reports, I can help you analyze the segment performance and identify the one that dragged down 3M's overall growth in 2022, excluding the impact of M&A.",Retail segment,0.0,0.0,0.0,0.3,0.2,0.5,18617,2761,361
+"What are major acquisitions that AMCOR has done in FY2023, FY2022 and FY2021?","Amcor completed these acquisitions during FY2023:
+-100% equity interest of a flexibles manufacturing company in the Czech Republic
+- 100% equity interest in a medical device packaging manufacturing site in
+Shanghai, China.
+-acquisition of a New Zealand-based leading manufacturer of state-of-the-art, automated protein
+packaging machines.","I'm unable to verify any major acquisitions that AMCOR has done in FY2023, FY2022, or FY2021.","I don't have real-time access to the latest financial data. However, I can provide you with some information based on publicly available data up to my knowledge cutoff in December 2023.
+
+As of my knowledge cutoff, here are some major acquisitions made by Amcor Limited in the specified years:
+
+1. FY2023: 
+   - Amcor acquired a 60% stake in the US-based packaging company, Crown Holdings' (previously known as Crown Corkscrew) US-based glass packaging business, Crown Glass Packaging, for approximately $1.1 billion.
+
+2. FY2022: 
+   - Amcor acquired the remaining 40% stake in Crown Glass Packaging from Crown Holdings for approximately $1.1 billion.
+
+3. FY",AMCOR has made the following acquisitions in the mentioned years:,0.0,0.0,0.0,0.0,0.5,0.0,3028,2996,1527
+Has Microsoft increased its debt on balance sheet between FY2023 and the FY2022 period?,No. Microsoft decreased its debt by $2.5bn in FY 2023 vs FY 2022.,"I don't have real-time access to current financial data. However, I can provide information based on publicly available data from Microsoft's annual reports and quarterly earnings releases.
+
+According to Microsoft's latest annual report (10-K filing for FY2022) and its latest quarterly earnings release (Q4 FY2022), I can provide some information on the company's debt.
+
+As of September 30, 2022, Microsoft's total debt was approximately $143.8 billion.
+
+As for the FY2023 period, I couldn't find the exact information on the company's debt as the FY2023 period is still ongoing. However, I can provide some context on the company's debt trends.
+
+In its Q4 FY2022 earnings release, Microsoft","I don't have real-time access to the latest financial data. However, I can try to provide an answer based on the available information up to my cut-off knowledge date of December 2023.
+
+As of my knowledge cutoff, Microsoft's balance sheet for FY2022 and FY2023 was not publicly available. However, I can suggest some possible sources where you can find this information:
+
+1. Microsoft's official investor relations website: You can check Microsoft's investor relations website for their latest annual reports (10-K) and quarterly reports (10-Q), which include their balance sheets.
+2. Financial databases: You can also check financial databases such as Bloomberg, Thomson Reuters, or Yahoo Finance, which provide access to company financial data, including balance sheets","Yes, Microsoft has increased its debt on balance sheet between FY2023 and the FY2022 period.",0.0,0.0,0.0,0.3,0.3,0.5,17972,3321,2849
+"As of FY2023Q1, by how many percentage points did Pepsico raise full year guidance in respect of core constant currency EPS growth?",Pepsico raised full year guidance in respect of core constant currency EPS growth by 1 percentage point.,"I cannot provide information that is not publicly available. However, I can tell you that Pepsico's FY2023 Q1 earnings report was released on January 25, 2023.","I don't have access to real-time data or specific financial reports. However, I can suggest some possible sources where you can find the information you're looking for.
+
+As of my knowledge cutoff in December 2023, I can provide general information about Pepsico's financial reports. If you're looking for information on Pepsico's FY2023Q1 earnings report or guidance, I recommend checking the company's official website, investor relations section, or financial news websites such as Bloomberg, Reuters, or CNBC.
+
+If you provide me with more context or information about the specific guidance you're referring to, I may be able to help you find the answer.",1.5%,0.0,0.0,0.0,0.2,0.3,0.8,5357,2704,822
+What industry does AMCOR primarily operate in?,Amcor is a global leader in packaging production for various use cases.,"AMCOR is a global life science company that operates in the biotechnology industry, specifically in the areas of diagnostics, pharmaceuticals, and medical devices.","AMCOR is a global specialty chemicals company. They primarily operate in the specialty chemicals industry, which includes a range of products such as adhesives, sealants, coatings, and other specialty chemicals.",AMCOR operates in the Specialty Chemicals industry.,0.0,0.0,0.0,0.1,0.2,0.2,3392,1037,1806
+Is 3M a capital-intensive business based on FY2022 data?,"No, the company is managing its CAPEX and Fixed Assets pretty efficiently, which is evident from below key metrics:
+CAPEX/Revenue Ratio: 5.1%
+Fixed assets/Total Assets: 20%
+Return on Assets= 12.4%","To determine if 3M is a capital-intensive business based on FY2022 data, I'll analyze the company's capital structure and expenditures.
+
+According to 3M's FY2022 Annual Report (Form 10-K), the company's capital expenditures (CapEx) were $3.4 billion, which represents about 4.3% of its total revenue of $79.6 billion.
+
+To calculate the capital intensity ratio, we can use the following formula:
+
+Capital Intensity Ratio = (CapEx / Total Revenue) x 100
+
+Plugging in the numbers:
+
+Capital Intensity Ratio = ($3.4 billion / $79.6 billion) x 100 ≈ 4.3%
+
+Based on this calculation, 3","To determine if 3M is a capital-intensive business based on FY2022 data, let's analyze the company's capital expenditures and debt levels.
+
+According to 3M's FY2022 Annual Report, the company reported:
+
+1. Capital expenditures: $2.4 billion (down 14% from FY2021)
+2. Debt: $10.3 billion (down 11% from FY2021)
+
+While 3M did reduce its capital expenditures in FY2022, its debt levels remained relatively stable. However, to assess the capital intensity of the business, we need to consider the company's return on capital employed (ROCE).
+
+3M's FY2022 ROCE was 24.4%, indicating that the company","Yes, 3M is a capital-intensive business based on FY2022 data.",0.8,0.7,0.0,0.85,0.8,0.8,17888,3092,2121
+"By drawing conclusions from the information stated only in the income statement, what is Amazon's FY2019 net income attributable to shareholders (in USD millions)?",$11588.00,"I don't have access to real-time data or specific financial statements for Amazon's FY2019. However, I can provide information on Amazon's FY2019 net income based on publicly available data.
+
+According to Amazon's FY2019 annual report (10-K filing with the SEC), the net income attributable to common stockholders was $11,243 million.","To answer this question, I would need to refer to Amazon's FY2019 income statement. However, I don't have direct access to the document. 
+
+That being said, I can try to provide an answer based on publicly available information. According to Amazon's FY2019 earnings report, the net income attributable to Amazon Web Services (AWS) was $4.6 billion, and the net income attributable to Amazon's retail segment was $3.1 billion. 
+
+Additionally, Amazon reported a total net income of $10.04 billion for FY2019. However, this figure includes non-operating items and other adjustments.
+
+If we only consider the net income attributable to shareholders, we can subtract the non-operating items and other adjustments from",0.00,0.9,0.8,0.0,0.8,0.7,0.0,8997,3016,493
+"At the Pepsico AGM held on May 3, 2023, what was the outcome of the shareholder vote on the shareholder proposal for a congruency report by Pepsico on net-zero emissions policies?",The shareholder proposal for a congruency report by Pepsico on net-zero emissions policies was defeated.,"I cannot provide information on the outcome of a specific shareholder vote at a Pepsico AGM, as I do not have access to real-time information or specific data on the company's AGM proceedings. However, I can suggest some possible sources where you may be able to find the information you are looking for:
+
+1. Pepsico's investor relations website: You can check Pepsico's investor relations website for information on their latest earnings reports, investor presentations, and other financial information.
+2. Financial news websites: Websites such as Bloomberg, Reuters, or CNBC may have reported on the Pepsico AGM and the outcome of the shareholder vote on the shareholder proposal.
+3. Company filings: You can also check the Securities and Exchange Commission","I don't have access to real-time information or specific data on the Pepsico AGM held on May 3, 2023. However, I can suggest some possible sources where you may be able to find the information you're looking for:
+
+1. Pepsico's investor relations website: You can check Pepsico's investor relations website for information on their annual general meeting (AGM) and shareholder proposals.
+2. Regulatory filings: You can search regulatory filings, such as Pepsico's proxy statement, to find information on shareholder proposals and their outcomes.
+3. News articles: You can search news articles from reputable sources, such as Bloomberg, Reuters, or CNBC, to find information on the Pepsico AGM and",The proposal was approved by 99.9% of the shareholders.,0.0,0.0,0.0,0.5,0.5,0.5,18593,3037,1769
+Are JnJ's FY2022 financials that of a high growth company?,"No, JnJ's FY2022 financials are not of a high growth company as sales grew by 1.3% in FY2022.","I'll need to access the latest financial documents for Johnson & Johnson (JNJ) to provide an accurate assessment. However, I can provide some general insights based on publicly available information.
+
+According to Johnson & Johnson's (JNJ) FY2022 annual report (Form 10-K), the company's financial performance was strong, but not necessarily indicative of a high-growth company.
+
+Here are some key highlights:
+
+1. Revenue: JNJ's revenue grew 4.3% year-over-year (YoY) to $82.3 billion, driven by growth in the Pharmaceuticals segment, particularly in the COVID-19 vaccine business.
+2. Net income: The company's net income increased 12.3% YoY to $19.","Johnson & Johnson (JNJ) is a multinational healthcare company with a diverse portfolio of pharmaceuticals, medical devices, and consumer products.
+
+Analyzing JNJ's FY2022 financials, we can see that the company reported:
+
+- Revenue: $82.1 billion (up 4.1% from FY2021)
+- Net Income: $22.5 billion (up 6.3% from FY2021)
+- Earnings Per Share (EPS): $7.24 (up 6.5% from FY2021)
+
+While JNJ's revenue and net income growth are positive, the growth rate is relatively moderate compared to some of its peers in the pharmaceutical industry. The company's growth is largely driven by its established","Yes, JnJ's FY2022 financials are of a high growth company.",0.2,0.5,0.0,0.5,0.7,0.2,18860,3169,2264
+Did AMD report customer concentration in FY22?,"Yes, one customer accounted for 16% of consolidated net revenue","I'm unable to provide real-time or the most current information, but I can try to find the data from AMD's FY22 earnings report.
+
+According to AMD's FY2022 (Q4 2022) earnings report, the company reported a significant increase in customer concentration.
+
+In the ""Segment Information"" section of the report, AMD reported that:
+
+* The ""Compute & Graphics"" segment accounted for 83% of total revenue in FY2022, up from 74% in FY2021.
+* The ""Epic Games"" segment accounted for 14% of total revenue in FY2022, up from 10% in FY2021.
+* The ""Gaming"" segment accounted for 3% of total revenue in FY","I don't have direct access to AMD's FY22 customer concentration report. However, I can suggest some possible sources where you may be able to find this information:
+
+1. AMD's official investor relations website: You can check AMD's investor relations website for their FY22 annual report or quarterly earnings reports, which may include information on customer concentration.
+2. SEC filings: AMD files annual and quarterly reports with the Securities and Exchange Commission (SEC). You can search the SEC's EDGAR database for AMD's FY22 filings, which may include information on customer concentration.
+3. Financial news websites: Financial news websites such as Bloomberg, Reuters, or CNBC may have reported on AMD's FY22 customer concentration, or you can search their archives for relevant","Yes, AMD reported customer concentration of 98.9% in FY22.",0.5,0.0,0.0,0.6,0.5,0.5,17827,3125,2042
+"As of FY 2021, how much did Verizon expect to pay for its retirees in 2024?","The estimated pension benefits were $1097 million, and the estimated health care and life insurance benefits were $862 million.",I cannot provide information on Verizon's expected payments to retirees in 2024. Is there anything else I can help you with?,"I don't have access to Verizon's FY 2021 earnings report or balance sheet that specifically mentions their expected pension payments for retirees in 2024. However, I can suggest some possible sources where you may be able to find this information:
+
+1. Verizon's FY 2021 Annual Report (10-K filing): You can check the Securities and Exchange Commission (SEC) website for Verizon's FY 2021 Annual Report (10-K filing) to see if they provided any information on their expected pension payments for retirees in 2024.
+2. Verizon's FY 2021 Q4 Earnings Report: You can also check Verizon's FY 2021 Q4 Earnings Report (10-Q filing) to see if they provided any guidance",$1.8 billion.,0.0,0.0,0.9,0.1,0.3,1.0,2992,3160,830
+"By how much did Pepsico increase its unsecured five year revolving credit agreement on May 26, 2023?","$400,000,000 increase.",I cannot provide information on a specific financial transaction that has not been publicly disclosed. Is there anything else I can help you with?,"I don't have access to real-time data or specific information about Pepsico's unsecured five-year revolving credit agreement. However, I can suggest some possible sources where you may be able to find the information:
+
+1. Pepsico's investor relations website: You can check Pepsico's investor relations website for press releases and other financial information.
+2. Bloomberg or Thomson Reuters: These financial news agencies often provide coverage of major corporate deals, including credit agreements.
+3. S&P Global Market Intelligence: This platform provides access to financial data, including credit agreements and other corporate transactions.
+
+If you have any more specific information or context about the credit agreement, I may be able to help you find the answer.",$1.5 billion,0.0,0.0,0.0,0.2,0.5,0.0,3444,3037,889
+"What is the amount of the gain accruing to JnJ as a result of the separation of its Consumer Health business segment, as of August 30, 2023?",JnJ will make a gain of approximately $20 billion from the separation of its Consumer Health business segment.,"I don't have access to real-time data or specific financial information about Johnson & Johnson (JNJ) or its business segments. However, I can suggest some possible sources where you may be able to find the information you're looking for:
+
+1. Johnson & Johnson's investor relations website: You can check the company's investor relations website for quarterly and annual reports, which may include information about the separation of its Consumer Health business segment and any resulting gains or losses.
+2. Financial news websites: Websites like Bloomberg, Reuters, or CNBC may have articles or press releases from Johnson & Johnson about the separation of its Consumer Health business segment and any associated gains or losses.
+3. Financial databases: You can also try searching financial databases like EDGAR (","I don't have access to real-time data or specific financial information about Johnson & Johnson (JnJ) as of August 30, 2023. However, I can suggest some possible sources where you may be able to find the information you're looking for:
+
+1. Johnson & Johnson's official investor relations website: You can check JnJ's website for press releases, earnings reports, and other financial information.
+2. Financial news websites: Websites like Bloomberg, CNBC, or Reuters may have reported on JnJ's separation of its Consumer Health business segment and the resulting gain.
+3. Securities and Exchange Commission (SEC) filings: JnJ's SEC filings, such as its 10-Q or 10-K reports, may",$1.3 billion,0.0,0.0,0.0,0.5,0.3,0.2,18744,2924,965
+What is the FY2018 capital expenditure amount (in USD millions) for 3M? Give a response to the question by relying on the details shown in the cash flow statement.,$1577.00,"To answer this question, I'll rely on the cash flow statement for 3M (formerly known as the United States, Inc.) for the fiscal year 2018.
+
+According to the 3M 2018 Annual Report (Exhibit A: Consolidated Statements of Cash Flows), the cash flow statement for 2018 is as follows:
+
+**Cash Flows from Operating Activities**
+
+* Net cash provided by operating activities: $4,433 million
+
+**Capital Expenditures**
+
+* Capital expenditures: $2,444 million
+
+Therefore, the FY2018 capital expenditure amount for 3M is $2,444 million.","To find the FY2018 capital expenditure amount for 3M, I would refer to the cash flow statement. 
+
+According to 3M's FY2018 Annual Report, the cash flow statement shows the following information:
+
+- Net cash provided by operating activities: $4,439 million
+- Net cash used in investing activities: ($2,341 million)
+- Net cash used in financing activities: ($1,444 million)
+
+Capital expenditures are reported under the investing activities section of the cash flow statement. 
+
+Capital expenditures for FY2018 can be calculated as follows:
+
+Capital expenditures = Net cash used in investing activities
+= $2,341 million
+
+Therefore, the FY2018 capital expenditure amount for 3M is $2,341","$2,400",0.0,0.0,0.0,0.8,0.8,0.5,15605,2965,837
+Roughly how many times has JnJ sold its inventory in FY2022? Calculate inventory turnover ratio for FY2022; if conventional inventory management is not meaningful for the company then state that and explain why.,JnJ sold its inventory 2.7 times in FY2022.,"I'm unable to provide real-time or specific financial data for Johnson & Johnson (JNJ) without access to the company's most recent financial reports. However, I can guide you through the steps to calculate the inventory turnover ratio and discuss the limitations of this metric.
+
+**Calculating Inventory Turnover Ratio:**
+
+The Inventory Turnover Ratio is calculated by dividing the Cost of Goods Sold (COGS) by the Average Inventory. The formula is:
+
+Inventory Turnover Ratio = COGS / Average Inventory
+
+**Assuming we have the following data for JNJ's FY2022:**
+
+* COGS: $123,456,789,000 (from the company's annual report)
+* Average Inventory: $10,000,000 (assuming this","To calculate the inventory turnover ratio for Johnson & Johnson (JNJ) in FY2022, I'll need to gather the necessary data. According to JNJ's FY2022 Annual Report (Form 10-K), the company reported the following:
+
+- Cost of Goods Sold (COGS) for FY2022: $43.8 billion
+- Beginning Inventory for FY2022: $8.3 billion
+- Ending Inventory for FY2022: $7.4 billion
+
+Now, let's calculate the inventory turnover ratio:
+
+Inventory Turnover Ratio = COGS / Average Inventory
+= COGS / ((Beginning Inventory + Ending Inventory) / 2)
+= $43.8 billion / (($8.3 billion + $7.",Inventory turnover ratio for FY2022 is 3.5 times.,0.0,0.9,0.0,0.5,0.8,0.5,18784,3154,2182
+Has CVS Health paid dividends to common shareholders in Q2 of FY2022?,"Yes, CVS paid a $ 0.55 dividend per share every quarter in FY2022","I'm unable to access real-time financial data. However, I can suggest some alternatives to find the information you're looking for.
+
+You can check the official website of CVS Health (CVS) to see if they have announced any dividend payments for Q2 of FY2022. You can also check financial news websites such as Bloomberg, Yahoo Finance, or Google Finance for the latest information on CVS Health's dividend payments.
+
+Alternatively, you can also check the quarterly earnings report released by CVS Health for Q2 of FY2022, which should include information on dividend payments made during that quarter.","I can try to find the information for you. 
+
+According to CVS Health's Q2 FY2022 earnings report, the company did pay dividends to common shareholders. The quarterly dividend payment was $0.75 per share, and it was paid on July 14, 2022.","Yes, CVS Health paid a dividend of $0.95 per share in Q2 of FY2022.",0.5,0.0,0.0,0.6,0.8,0.8,14372,1323,2686
+What is the nature & purpose of AMCOR's restructuring liability as oF Q2 of FY2023 close?,87% of the total restructuring liability is related Employee liabilities.,"I don't have access to real-time financial data or specific information about Amcor's restructuring liability as of Q2 of FY2023. However, I can provide general information about restructuring liabilities and their purposes.
+
+A restructuring liability is a type of liability that arises when a company incurs costs associated with restructuring its operations, such as layoffs, plant closures, or other cost-cutting measures. The purpose of a restructuring liability is to reflect the costs of these changes in the financial statements.
+
+In the context of Amcor's financial statements, a restructuring liability might be reported as a non-cash item, meaning it is not a current expense, but rather a one-time charge that is reflected in the income statement. This is often the case when a company","I don't have real-time access to specific financial information about AMCOR's restructuring liability as of Q2 of FY2023 close. However, I can try to provide general information about restructuring liabilities.
+
+A restructuring liability is a non-cash item that represents the estimated amount of costs associated with a company's restructuring efforts, such as layoffs, plant closures, or other cost-cutting measures. The purpose of a restructuring liability is to reflect the impact of these costs on the company's financial statements.
+
+In the context of AMCOR's Q2 FY2023 close, the restructuring liability may have been reported as a result of the company's efforts to adapt to changing market conditions, improve its operational efficiency, or respond to industry disruptions.
+
+If you're looking",AMCOR's restructuring liability is a liability that represents the amount of cash that the company needs to pay to settle its restructuring obligations.,0.87,0.0,0.5,0.7,0.5,0.7,18831,3175,3187
+"By drawing conclusions from the information stated only in the statement of financial position, what is General Mills's FY2020 working capital ratio? Define working capital ratio as total current assets divided by total current liabilities. Round your answer to two decimal places.",0.68,"To calculate the working capital ratio, I'll need to extract the relevant information from the statement of financial position. However, I don't have access to the actual statement of financial position for General Mills. But I can guide you through the general steps to calculate the working capital ratio.
+
+The working capital ratio is calculated by dividing total current assets by total current liabilities. The formula is:
+
+Working Capital Ratio = Total Current Assets / Total Current Liabilities
+
+Please provide me with the actual numbers from General Mills's FY2020 statement of financial position, and I'll be happy to calculate the working capital ratio for you.","To calculate General Mills's FY2020 working capital ratio, we need to find the values of total current assets and total current liabilities from the statement of financial position.
+
+According to the 2020 Annual Report of General Mills, Inc., the statement of financial position shows:
+
+- Total Current Assets: $8,439,000,000
+- Total Current Liabilities: $4,341,000,000
+
+Now, we can calculate the working capital ratio as follows:
+
+Working Capital Ratio = Total Current Assets / Total Current Liabilities
+= $8,439,000,000 / $4,341,000,000
+= 1.95
+
+So, General Mills's FY2020 working capital ratio is 1.95.",1.45,0.0,0.0,0.0,0.5,1.0,1.0,15073,3180,480
+"Which business segment of JnJ will be treated as a discontinued operation from August 30, 2023 onward?","The Consumer Health business segment will be treated as a discontinued operation from August 30, 2023 onward.","I don't have access to real-time information about JNJ's business segments or any specific announcements regarding discontinued operations. However, I can suggest some possible sources where you may be able to find the information you're looking for:
+
+1. Johnson & Johnson's (JNJ) investor relations website: You can check the company's investor relations section for any announcements or updates on business segments and discontinued operations.
+2. JNJ's quarterly earnings reports: You can review the company's quarterly earnings reports, which are typically released after the market closes on a quarterly basis. These reports may include information on discontinued operations and any changes to business segments.
+3. JNJ's annual report: The company's annual report, also known as the Form 10-K,","I don't have real-time access to the latest financial information. However, I can suggest some possible sources where you can find the information.
+
+JNJ (Johnson & Johnson) is a multinational healthcare company with various business segments. To determine which business segment will be treated as a discontinued operation from August 30, 2023, onward, you can refer to the company's latest quarterly earnings report or annual report.
+
+In the 2023 annual report, Johnson & Johnson announced the discontinuation of its Ortho Clinical Corporation (OCC) business segment, which was acquired by Ortho Clinical Corporation in 2007. However, I do not have the exact date of discontinuation.
+
+For the most up-to-date information, I recommend checking the following","JnJ will treat its consumer business segment as a discontinued operation from August 30, 2023 onward.",0.0,0.0,1.0,0.5,0.5,1.0,18279,2996,2860
