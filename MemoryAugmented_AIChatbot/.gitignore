@@ -1,0 +1,33 @@
+# Environment variables — never commit your API keys
+.env
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# ChromaDB local vector store — too large, user-specific
+chroma_db/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+
+# Jupyter (if you ever add notebooks)
+.ipynb_checkpoints/
+*.ipynb

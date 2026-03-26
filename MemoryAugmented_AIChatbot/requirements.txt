@@ -1,0 +1,23 @@
+# Core LLM + orchestration
+langchain==0.3.7
+langchain-groq==0.2.1
+langchain-core==0.3.19
+langgraph==0.2.53
+
+# Memory
+mem0ai==0.1.29
+
+# Vector store (local, free, no server needed)
+chromadb==0.5.23
+
+# Embeddings (local, free — runs on CPU)
+sentence-transformers==3.3.1
+
+# UI
+streamlit==1.40.2
+
+# Utilities
+python-dotenv==1.0.1
+
+# Security layer (used in chatbot/security.py)
+# No extra installs needed — uses langchain-groq and re (stdlib)
