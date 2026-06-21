@@ -1,0 +1,113 @@
+Validating 106 significant candidates of run_20260619_133653_683874bb (this is a local 8B model — expect ~1 min/card)...
+  [  1/106]     ^TNX -> JPY=X    likely_spurious            conf=0.70
+  [  2/106]    ^GSPC -> ^NSEI    likely_spurious            conf=0.80
+  [  3/106]    ^IXIC -> ^NSEI    likely_spurious            conf=0.60
+  [  4/106]      XLF -> ^NSEI    likely_spurious            conf=0.50
+  [  5/106]    ^GSPC -> INR=X    likely_spurious            conf=0.60
+  [  6/106]     GC=F -> EURUSD=X likely_spurious            conf=0.60
+  [  7/106]     GC=F -> JPY=X    likely_spurious            conf=0.70
+  [  8/106]     JETS -> ^NSEI    likely_spurious            conf=0.50
+  [  9/106]      XLF -> INR=X    likely_spurious            conf=0.50
+  [ 10/106]    ^IXIC -> INR=X    likely_spurious            conf=0.50
+  [ 11/106]     JETS -> INR=X    likely_spurious            conf=0.50
+  [ 12/106]      XLE -> ^NSEI    likely_spurious            conf=0.50
+  [ 13/106]     ^TNX -> ^NSEI    likely_spurious            conf=0.60
+  [ 14/106]    ^NSEI -> INR=X    likely_spurious            conf=0.60
+  [ 15/106]     CL=F -> ^NSEI    likely_spurious            conf=0.60
+  [ 16/106]     ^TNX -> CL=F     likely_spurious            conf=0.50
+  [ 17/106]    ^GSPC -> EURUSD=X likely_spurious            conf=0.60
+  [ 18/106]      XLF -> CL=F     plausible_novel            conf=0.70
+  [ 19/106]    ^GSPC -> CL=F     likely_spurious            conf=0.50
+  [ 20/106]    ^IXIC -> EURUSD=X likely_spurious            conf=0.60
+  [ 21/106]     JETS -> EURUSD=X likely_spurious            conf=0.50
+  [ 22/106]     ^TNX -> JETS     likely_spurious            conf=0.50
+  [ 23/106]     ^TNX -> XLE      likely_spurious            conf=0.50
+  [ 24/106]      XLF -> JPY=X    likely_spurious            conf=0.50
+  [ 25/106]      XLF -> JETS     likely_spurious            conf=0.50
+  [ 26/106]    ^NSEI -> ^TNX     likely_spurious            conf=0.60
+  [ 27/106]    ^IXIC -> CL=F     likely_spurious            conf=0.60
+  [ 28/106]      XLF -> ^IXIC    likely_spurious            conf=0.50
+  [ 29/106]      XLF -> EURUSD=X likely_spurious            conf=0.50
+  [ 30/106]      XLE -> INR=X    plausible_known_mechanism  conf=0.70
+  [ 31/106]      XLE -> CL=F     likely_spurious            conf=0.50
+  [ 32/106]    ^GSPC -> ^TNX     likely_spurious            conf=0.60
+  [ 33/106]    ^GSPC -> JETS     likely_spurious            conf=0.50
+  [ 34/106]    ^GSPC -> ^IXIC    likely_spurious            conf=0.60
+  [ 35/106]     JETS -> ^TNX     likely_spurious            conf=0.50
+  [ 36/106]     JETS -> ^GSPC    likely_spurious            conf=0.50
+  [ 37/106]      XLF -> ^TNX     likely_spurious            conf=0.50
+  [ 38/106]      XLF -> XLE      likely_spurious            conf=0.50
+  [ 39/106]     ^TNX -> EURUSD=X likely_spurious            conf=0.70
+  [ 40/106]    ^IXIC -> ^TNX     likely_spurious            conf=0.60
+  [ 41/106]     JETS -> CL=F     likely_spurious            conf=0.50
+  [ 42/106]     JETS -> ^IXIC    likely_spurious            conf=0.50
+  [ 43/106]      XLE -> ^TNX     plausible_known_mechanism  conf=0.70
+  [ 44/106]      XLF -> ^GSPC    likely_spurious            conf=0.50
+  [ 45/106]    ^NSEI -> ^GSPC    likely_spurious            conf=0.50
+  [ 46/106]    ^GSPC -> JPY=X    likely_spurious            conf=0.50
+  [ 47/106]      XLE -> JPY=X    plausible_known_mechanism  conf=0.70
+  [ 48/106]    ^NSEI -> CL=F     likely_spurious            conf=0.60
+  [ 49/106]     CL=F -> XLE      plausible_known_mechanism  conf=0.80
+  [ 50/106]     JETS -> XLE      likely_spurious            conf=0.50
+  [ 51/106]    ^NSEI -> XLF      likely_spurious            conf=0.60
+  [ 52/106]    ^GSPC -> XLE      likely_spurious            conf=0.50
+  [ 53/106]    ^IXIC -> JPY=X    likely_spurious            conf=0.60
+  [ 54/106]    ^NSEI -> ^IXIC    likely_spurious            conf=0.70
+  [ 55/106]      XLE -> EURUSD=X likely_spurious            conf=0.60
+  [ 56/106]     ^TNX -> XLF      likely_spurious            conf=0.50
+  [ 57/106]    ^NSEI -> XLE      plausible_known_mechanism  conf=0.70
+  [ 58/106]     JETS -> XLF      likely_spurious            conf=0.50
+  [ 59/106]     CL=F -> ^TNX     likely_spurious            conf=0.60
+  [ 60/106]    ^IXIC -> ^GSPC    plausible_novel            conf=0.70
+  [ 61/106]     CL=F -> XLF      plausible_known_mechanism  conf=0.80
+  [ 62/106]    ^NSEI -> JETS     likely_spurious            conf=0.60
+  [ 63/106]    ^IXIC -> JETS     likely_spurious            conf=0.60
+  [ 64/106]    ^NSEI -> EURUSD=X likely_spurious            conf=0.60
+  [ 65/106]     ^TNX -> INR=X    likely_spurious            conf=0.50
+  [ 66/106]     GC=F -> ^NSEI    likely_spurious            conf=0.60
+  [ 67/106]      XLE -> JETS     plausible_known_mechanism  conf=0.70
+  [ 68/106]    INR=X -> JETS     likely_spurious            conf=0.50
+  [ 69/106]    INR=X -> CL=F     likely_spurious            conf=0.50
+  [ 70/106]     CL=F -> ^GSPC    likely_spurious            conf=0.50
+  [ 71/106]     GC=F -> ^TNX     likely_spurious            conf=0.60
+  [ 72/106]    INR=X -> ^TNX     likely_spurious            conf=0.70
+  [ 73/106]     CL=F -> JPY=X    likely_spurious            conf=0.60
+  [ 74/106]     JETS -> JPY=X    likely_spurious            conf=0.50
+  [ 75/106]    ^IXIC -> GC=F     likely_spurious            conf=0.60
+  [ 76/106]    ^GSPC -> GC=F     likely_spurious            conf=0.60
+  [ 77/106]    ^IXIC -> XLE      likely_spurious            conf=0.60
+  [ 78/106] EURUSD=X -> JETS     likely_spurious            conf=0.50
+  [ 79/106]     CL=F -> JETS     likely_spurious            conf=0.50
+  [ 80/106]    JPY=X -> CL=F     likely_spurious            conf=0.50
+  [ 81/106]    ^GSPC -> XLF      likely_spurious            conf=0.60
+  [ 82/106] EURUSD=X -> GC=F     likely_spurious            conf=0.50
+  [ 83/106]    JPY=X -> XLF      likely_spurious            conf=0.70
+  [ 84/106]    ^NSEI -> JPY=X    likely_spurious            conf=0.70
+  [ 85/106]      XLE -> XLF      likely_spurious            conf=0.50
+  [ 86/106]    JPY=X -> ^GSPC    likely_spurious            conf=0.80
+  [ 87/106]     NG=F -> GC=F     likely_spurious            conf=0.60
+  [ 88/106]     ^TNX -> ^GSPC    likely_spurious            conf=0.60
+  [ 89/106]    JPY=X -> ^IXIC    likely_spurious            conf=0.70
+  [ 90/106]      XLE -> GC=F     likely_spurious            conf=0.50
+  [ 91/106]     CL=F -> EURUSD=X likely_spurious            conf=0.50
+  [ 92/106]     JETS -> GC=F     likely_spurious            conf=0.50
+  [ 93/106]     ^TNX -> GC=F     likely_spurious            conf=0.50
+  [ 94/106]     NG=F -> CL=F     likely_spurious            conf=0.40
+  [ 95/106]     CL=F -> ^IXIC    plausible_known_mechanism  conf=0.70
+  [ 96/106]     GC=F -> INR=X    likely_spurious            conf=0.60
+  [ 97/106]    INR=X -> EURUSD=X likely_spurious            conf=0.50
+  [ 98/106]    JPY=X -> XLE      likely_spurious            conf=0.60
+  [ 99/106]      XLE -> ^IXIC    likely_spurious            conf=0.50
+  [100/106]    JPY=X -> ^TNX     likely_spurious            conf=0.70
+  [101/106]     NG=F -> JPY=X    likely_spurious            conf=0.50
+  [102/106]    JPY=X -> JETS     likely_spurious            conf=0.40
+  [103/106] EURUSD=X -> JPY=X    likely_spurious            conf=0.50
+  [104/106]    ^IXIC -> NG=F     likely_spurious            conf=0.60
+  [105/106]    JPY=X -> GC=F     likely_spurious            conf=0.50
+  [106/106]    ^IXIC -> XLF      likely_spurious            conf=0.50
+
+Done in 93.2 min. Flag counts: {'plausible_known_mechanism': 8, 'plausible_novel': 2, 'likely_spurious': 96, 'parse_failed': 0}
+Running spurious-control probe...
+  spurious-control -> likely_spurious (conf 0.50)
+Wrote D:\GenAI_udemy\Git_Projects\Cross-Asset Causal Discovery Engine\results\hypothesis_cards.csv
+Wrote D:\GenAI_udemy\Git_Projects\Cross-Asset Causal Discovery Engine\results\cards_summary.md

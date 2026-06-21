@@ -1,0 +1,83 @@
+2026-06-20 17:34:58 INFO    Monitor cycle start | window 2018-01-01 .. 2026-03-13 | alpha=0.05 n_confirm=3
+2026-06-20 17:35:18 INFO    Persisted run run_20260620_120458_da71911a | covered 2018-01-03..2026-03-12 | 156 candidates (105 significant)
+2026-06-20 17:35:18 INFO    Only one run on record — baseline established, nothing to diff yet. Run the monitor again (against later data) to detect flips.
+2026-06-20 17:35:18 INFO    Monitor cycle done in 19.4s
+2026-06-20 17:35:26 INFO    Monitor cycle start | window 2018-01-01 .. 2026-04-17 | alpha=0.05 n_confirm=3
+2026-06-20 17:35:45 INFO    Persisted run run_20260620_120526_973f37e4 | covered 2018-01-03..2026-04-16 | 156 candidates (104 significant)
+2026-06-20 17:35:45 INFO    Diffing regimes: prior=run_20260620_120458_da71911a -> new=run_20260620_120526_973f37e4
+2026-06-20 17:35:45 INFO    Flip summary: 10 newly detected, 0 still-pending (held), 0 CONFIRMED, 0 reverted (rejected as data-revision/transient).
+2026-06-20 17:35:45 INFO      NEW (provisional)  | Energy Sector ETF -> Nifty 50 [coupled -> decoupled (deactivated)] status=pending (1/3) corrected_p=5.48e-22 lag=5d
+2026-06-20 17:35:45 INFO      NEW (provisional)  | 10Y Treasury Yield -> Energy Sector ETF [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=1.29e-10 lag=5d
+2026-06-20 17:35:45 INFO      NEW (provisional)  | S&P 500 -> US Global Jets (Airlines) ETF [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=1.92e-08 lag=5d
+2026-06-20 17:35:45 INFO      NEW (provisional)  | US Global Jets (Airlines) ETF -> S&P 500 [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=4.26e-08 lag=2d
+2026-06-20 17:35:45 INFO      NEW (provisional)  | Nasdaq -> 10Y Treasury Yield [coupled -> decoupled (deactivated)] status=pending (1/3) corrected_p=2.31e-07 lag=5d
+2026-06-20 17:35:45 INFO      NEW (provisional)  | Energy Sector ETF -> 10Y Treasury Yield [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=9.75e-07 lag=4d
+2026-06-20 17:35:45 INFO      NEW (provisional)  | Energy Sector ETF -> EUR/USD [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=2.30e-05 lag=2d
+2026-06-20 17:35:45 INFO      NEW (provisional)  | Nifty 50 -> Energy Sector ETF [coupled -> decoupled (deactivated)] status=pending (1/3) corrected_p=6.22e-05 lag=4d
+2026-06-20 17:35:45 INFO      NEW (provisional)  | 10Y Treasury Yield -> USD/INR [coupled -> decoupled (deactivated)] status=pending (1/3) corrected_p=2.51e-04 lag=5d
+2026-06-20 17:35:45 INFO      NEW (provisional)  | USD/INR -> 10Y Treasury Yield [coupled -> decoupled (deactivated)] status=pending (1/3) corrected_p=1.59e-03 lag=4d
+2026-06-20 17:35:45 INFO    Monitor cycle done in 19.2s
+2026-06-20 17:35:55 INFO    Monitor cycle start | window 2018-01-01 .. 2026-05-15 | alpha=0.05 n_confirm=3
+2026-06-20 17:36:17 INFO    Persisted run run_20260620_120555_a859f552 | covered 2018-01-03..2026-05-14 | 156 candidates (104 significant)
+2026-06-20 17:36:17 INFO    Diffing regimes: prior=run_20260620_120526_973f37e4 -> new=run_20260620_120555_a859f552
+2026-06-20 17:36:17 INFO    Flip summary: 6 newly detected, 10 still-pending (held), 0 CONFIRMED, 0 reverted (rejected as data-revision/transient).
+2026-06-20 17:36:17 INFO      NEW (provisional)  | 10Y Treasury Yield -> Nifty 50 [coupled -> decoupled (deactivated)] status=pending (1/3) corrected_p=8.73e-19 lag=5d
+2026-06-20 17:36:17 INFO      NEW (provisional)  | Nifty 50 -> 10Y Treasury Yield [coupled -> decoupled (deactivated)] status=pending (1/3) corrected_p=3.22e-10 lag=5d
+2026-06-20 17:36:17 INFO      NEW (provisional)  | Energy Sector ETF -> USD/INR [coupled -> decoupled (deactivated)] status=pending (1/3) corrected_p=1.27e-09 lag=1d
+2026-06-20 17:36:17 INFO      NEW (provisional)  | 10Y Treasury Yield -> EUR/USD [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=3.73e-07 lag=1d
+2026-06-20 17:36:17 INFO      NEW (provisional)  | Nasdaq -> Gold [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=1.20e-03 lag=3d
+2026-06-20 17:36:17 INFO      NEW (provisional)  | Energy Sector ETF -> Gold [coupled -> decoupled (deactivated)] status=pending (1/3) corrected_p=8.27e-03 lag=2d
+2026-06-20 17:36:17 INFO      HELD (still pending)| Energy Sector ETF -> Nifty 50 [coupled -> decoupled (deactivated)] status=pending (2/3) corrected_p=5.48e-22 lag=5d
+2026-06-20 17:36:17 INFO      HELD (still pending)| 10Y Treasury Yield -> Energy Sector ETF [decoupled -> coupled (activated)] status=pending (2/3) corrected_p=1.29e-10 lag=5d
+2026-06-20 17:36:17 INFO      HELD (still pending)| S&P 500 -> US Global Jets (Airlines) ETF [decoupled -> coupled (activated)] status=pending (2/3) corrected_p=1.92e-08 lag=5d
+2026-06-20 17:36:17 INFO      HELD (still pending)| US Global Jets (Airlines) ETF -> S&P 500 [decoupled -> coupled (activated)] status=pending (2/3) corrected_p=4.26e-08 lag=2d
+2026-06-20 17:36:17 INFO      HELD (still pending)| Nasdaq -> 10Y Treasury Yield [coupled -> decoupled (deactivated)] status=pending (2/3) corrected_p=2.31e-07 lag=5d
+2026-06-20 17:36:17 INFO      HELD (still pending)| Energy Sector ETF -> 10Y Treasury Yield [decoupled -> coupled (activated)] status=pending (2/3) corrected_p=9.75e-07 lag=4d
+2026-06-20 17:36:17 INFO      HELD (still pending)| Energy Sector ETF -> EUR/USD [decoupled -> coupled (activated)] status=pending (2/3) corrected_p=2.30e-05 lag=2d
+2026-06-20 17:36:17 INFO      HELD (still pending)| Nifty 50 -> Energy Sector ETF [coupled -> decoupled (deactivated)] status=pending (2/3) corrected_p=6.22e-05 lag=4d
+2026-06-20 17:36:17 INFO      HELD (still pending)| 10Y Treasury Yield -> USD/INR [coupled -> decoupled (deactivated)] status=pending (2/3) corrected_p=2.51e-04 lag=5d
+2026-06-20 17:36:17 INFO      HELD (still pending)| USD/INR -> 10Y Treasury Yield [coupled -> decoupled (deactivated)] status=pending (2/3) corrected_p=1.59e-03 lag=4d
+2026-06-20 17:36:17 INFO    Monitor cycle done in 22.0s
+2026-06-20 17:36:28 INFO    Monitor cycle start | window 2018-01-01 .. 2026-06-12 | alpha=0.05 n_confirm=3
+2026-06-20 17:36:48 INFO    Persisted run run_20260620_120628_dffb4d8a | covered 2018-01-03..2026-06-11 | 156 candidates (106 significant)
+2026-06-20 17:36:48 INFO    Diffing regimes: prior=run_20260620_120555_a859f552 -> new=run_20260620_120628_dffb4d8a
+2026-06-20 17:36:48 INFO    Flip summary: 22 newly detected, 6 still-pending (held), 10 CONFIRMED, 0 reverted (rejected as data-revision/transient).
+2026-06-20 17:36:48 INFO      NEW (provisional)  | S&P 500 -> Nifty 50 [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=3.27e-42 lag=5d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | Nasdaq -> Nifty 50 [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=6.07e-35 lag=4d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | Financials Sector ETF -> Nifty 50 [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=2.32e-34 lag=5d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | US Global Jets (Airlines) ETF -> Nifty 50 [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=2.41e-27 lag=4d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | Financials Sector ETF -> US Global Jets (Airlines) ETF [coupled -> decoupled (deactivated)] status=pending (1/3) corrected_p=2.79e-10 lag=5d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | Financials Sector ETF -> EUR/USD [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=5.36e-09 lag=2d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | Energy Sector ETF -> Crude Oil [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=1.26e-08 lag=4d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | US Global Jets (Airlines) ETF -> Nasdaq [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=3.93e-07 lag=2d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | Nifty 50 -> S&P 500 [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=1.16e-06 lag=4d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | Energy Sector ETF -> USD/JPY [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=1.65e-06 lag=1d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | Crude Oil -> Energy Sector ETF [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=1.25e-05 lag=3d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | Nifty 50 -> Financials Sector ETF [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=1.56e-05 lag=4d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | Nifty 50 -> Nasdaq [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=4.34e-05 lag=4d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | US Global Jets (Airlines) ETF -> Financials Sector ETF [coupled -> decoupled (deactivated)] status=pending (1/3) corrected_p=9.47e-05 lag=5d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | Nasdaq -> US Global Jets (Airlines) ETF [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=2.92e-04 lag=5d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | Nifty 50 -> US Global Jets (Airlines) ETF [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=2.92e-04 lag=5d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | Gold -> 10Y Treasury Yield [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=1.07e-03 lag=5d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | US Global Jets (Airlines) ETF -> USD/JPY [coupled -> decoupled (deactivated)] status=pending (1/3) corrected_p=1.69e-03 lag=2d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | Nifty 50 -> USD/JPY [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=6.98e-03 lag=2d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | 10Y Treasury Yield -> Gold [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=1.35e-02 lag=3d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | USD/JPY -> Energy Sector ETF [decoupled -> coupled (activated)] status=pending (1/3) corrected_p=3.25e-02 lag=1d
+2026-06-20 17:36:48 INFO      NEW (provisional)  | USD/JPY -> US Global Jets (Airlines) ETF [coupled -> decoupled (deactivated)] status=pending (1/3) corrected_p=3.67e-02 lag=1d
+2026-06-20 17:36:48 INFO      HELD (still pending)| 10Y Treasury Yield -> Nifty 50 [coupled -> decoupled (deactivated)] status=pending (2/3) corrected_p=8.73e-19 lag=5d
+2026-06-20 17:36:48 INFO      HELD (still pending)| Nifty 50 -> 10Y Treasury Yield [coupled -> decoupled (deactivated)] status=pending (2/3) corrected_p=3.22e-10 lag=5d
+2026-06-20 17:36:48 INFO      HELD (still pending)| Energy Sector ETF -> USD/INR [coupled -> decoupled (deactivated)] status=pending (2/3) corrected_p=1.27e-09 lag=1d
+2026-06-20 17:36:48 INFO      HELD (still pending)| 10Y Treasury Yield -> EUR/USD [decoupled -> coupled (activated)] status=pending (2/3) corrected_p=3.73e-07 lag=1d
+2026-06-20 17:36:48 INFO      HELD (still pending)| Nasdaq -> Gold [decoupled -> coupled (activated)] status=pending (2/3) corrected_p=1.20e-03 lag=3d
+2026-06-20 17:36:48 INFO      HELD (still pending)| Energy Sector ETF -> Gold [coupled -> decoupled (deactivated)] status=pending (2/3) corrected_p=8.27e-03 lag=2d
+2026-06-20 17:36:48 INFO      CONFIRMED ✓        | Energy Sector ETF -> Nifty 50 [coupled -> decoupled (deactivated)] status=confirmed (3/3) corrected_p=5.48e-22 lag=5d
+2026-06-20 17:36:48 INFO      CONFIRMED ✓        | 10Y Treasury Yield -> Energy Sector ETF [decoupled -> coupled (activated)] status=confirmed (3/3) corrected_p=1.29e-10 lag=5d
+2026-06-20 17:36:48 INFO      CONFIRMED ✓        | S&P 500 -> US Global Jets (Airlines) ETF [decoupled -> coupled (activated)] status=confirmed (3/3) corrected_p=1.92e-08 lag=5d
+2026-06-20 17:36:48 INFO      CONFIRMED ✓        | US Global Jets (Airlines) ETF -> S&P 500 [decoupled -> coupled (activated)] status=confirmed (3/3) corrected_p=4.26e-08 lag=2d
+2026-06-20 17:36:48 INFO      CONFIRMED ✓        | Nasdaq -> 10Y Treasury Yield [coupled -> decoupled (deactivated)] status=confirmed (3/3) corrected_p=2.31e-07 lag=5d
+2026-06-20 17:36:48 INFO      CONFIRMED ✓        | Energy Sector ETF -> 10Y Treasury Yield [decoupled -> coupled (activated)] status=confirmed (3/3) corrected_p=9.75e-07 lag=4d
+2026-06-20 17:36:48 INFO      CONFIRMED ✓        | Energy Sector ETF -> EUR/USD [decoupled -> coupled (activated)] status=confirmed (3/3) corrected_p=2.30e-05 lag=2d
+2026-06-20 17:36:48 INFO      CONFIRMED ✓        | Nifty 50 -> Energy Sector ETF [coupled -> decoupled (deactivated)] status=confirmed (3/3) corrected_p=6.22e-05 lag=4d
+2026-06-20 17:36:48 INFO      CONFIRMED ✓        | 10Y Treasury Yield -> USD/INR [coupled -> decoupled (deactivated)] status=confirmed (3/3) corrected_p=2.51e-04 lag=5d
+2026-06-20 17:36:48 INFO      CONFIRMED ✓        | USD/INR -> 10Y Treasury Yield [coupled -> decoupled (deactivated)] status=confirmed (3/3) corrected_p=1.59e-03 lag=4d
+2026-06-20 17:36:48 INFO    Monitor cycle done in 19.7s

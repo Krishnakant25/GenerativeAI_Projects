@@ -1,0 +1,25 @@
+# Virtual environments
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# SQLite database (generated artifact)
+*.db
+*.sqlite
+*.sqlite3
+
+# Local data cache
+data/cache/
+*.parquet
+
+# Env / secrets
+.env
+
+# OS
+.DS_Store
+Thumbs.db

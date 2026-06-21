@@ -1,0 +1,21 @@
+source,source_name,target,target_name,edge_type,orientation_source,corrected_p_value,lag,correlation_strength,is_significant
+JETS,US Global Jets (Airlines) ETF,^NSEI,Nifty 50,directed,pc,2.4589434192503896e-27,4,-0.0466196411346007,true
+XLE,Energy Sector ETF,^NSEI,Nifty 50,directed,pc,4.780862268945223e-22,5,0.11798327104673116,true
+^TNX,10Y Treasury Yield,XLE,Energy Sector ETF,directed,pc,1.1013261168975218e-10,5,0.13191155297743626,true
+JETS,US Global Jets (Airlines) ETF,^GSPC,S&P 500,directed,pc,4.294851087894297e-8,2,0.16707864726465205,true
+XLF,Financials Sector ETF,XLE,Energy Sector ETF,directed,pc,1.7973528902796707e-7,2,0.15053502505717842,true
+JETS,US Global Jets (Airlines) ETF,^IXIC,Nasdaq,undirected,granger,3.667877126913881e-7,2,0.14348568371550238,true
+XLF,Financials Sector ETF,^GSPC,S&P 500,directed,pc,1.0311238784152477e-6,2,0.16224107661778073,true
+CL=F,Crude Oil,XLE,Energy Sector ETF,directed,pc,0.000012575570291718001,3,0.06231319266808366,true
+JETS,US Global Jets (Airlines) ETF,XLE,Energy Sector ETF,directed,pc,0.00001298913119253482,2,0.14171753891447983,true
+^TNX,10Y Treasury Yield,XLF,Financials Sector ETF,directed,pc,0.00005896733365723765,5,0.07901401551869455,true
+JETS,US Global Jets (Airlines) ETF,XLF,Financials Sector ETF,directed,pc,0.0000947881421849234,5,0.023162018962016744,true
+^IXIC,Nasdaq,^GSPC,S&P 500,directed,pc,0.00015632314079744018,2,0.07656015329840646,true
+^NSEI,Nifty 50,EURUSD=X,EUR/USD,directed,pc,0.00032128068694372533,2,0.08364490946406172,true
+^TNX,10Y Treasury Yield,GC=F,Gold,directed,pc,0.013557608149819357,3,0.05188242754024438,true
+INR=X,USD/INR,EURUSD=X,EUR/USD,directed,pc,0.031200754986748104,1,-0.05045857319839119,true
+^IXIC,Nasdaq,XLF,Financials Sector ETF,directed,pc,0.04995813005280087,5,0.11473053189977384,true
+INR=X,USD/INR,^NSEI,Nifty 50,directed,pc,0.11434440072574217,3,0.046166160975032705,false
+CL=F,Crude Oil,GC=F,Gold,directed,pc,0.2616178516401725,4,-0.04264528515197172,false
+NG=F,Natural Gas,XLE,Energy Sector ETF,directed,pc,0.4067813182759942,1,0.023300846995000835,false
+JPY=X,USD/JPY,EURUSD=X,EUR/USD,directed,pc,0.5248252474609331,1,0.01867599089485149,false
