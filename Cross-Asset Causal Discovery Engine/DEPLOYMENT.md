@@ -106,9 +106,20 @@ Notes:
   `runtime.txt` containing `3.11.9`) so the same wheels resolve.
 - **Dependencies install cleanly on Linux:** no Windows-only or GPU-specific
   packages. `causal-learn`, `hmmlearn`, `polars`, `statsmodels`, `scipy`,
-  `numpy`, `matplotlib` all ship manylinux wheels. `causal-learn` pulls the
-  pure-Python `graphviz`/`pydot` bindings; the PC algorithm itself does **not**
-  require the system `graphviz` binary, so the build needs no apt packages.
+  `numpy`, `matplotlib` all ship manylinux wheels.
+- **No system Graphviz needed (verified by tracing the call path, not inferred
+  from the pip dependency tree):** `causal-learn` transitively installs the
+  pure-Python `graphviz`/`pydot` bindings, but nothing ever invokes the system
+  `dot` executable. The live request paths for `GET /graph` and `GET
+  /candidates` are raw SQLite `SELECT`s (`db/storage.py::load_graph` /
+  `load_candidates`) → Pydantic — no graph library is on the path at all. The PC
+  algorithm (`pc()` in `causal/graph_discovery.py`) runs **only** inside
+  `/analyze`, which is 503-gated in demo mode, so it is never even reached on the
+  host; and even it builds an in-memory NetworkX graph with no `to_pydot`/render
+  call. The offline `graph.png` (a static `results/` artifact, regenerated only
+  by `scripts/record_validation_run.py`, never by the API) uses
+  `nx.spring_layout` + matplotlib, **not** `graphviz_layout`. So the build needs
+  no apt packages / Aptfile.
 - **Memory (~512 MB):** the API imports the full scientific stack at startup
   (it shares modules with the pipeline) even though demo mode never *runs* it.
   This fits in 512 MB for read-only serving but is not generous; if the free
