@@ -110,7 +110,8 @@ DB_PATH = Path(__file__).resolve().parent / "db" / "causal_engine.db"
 # The Streamlit dashboard NEVER imports the pipeline; it only talks to the
 # FastAPI service over HTTP so the API stays the single source of truth. Every
 # hardcoded dashboard parameter lives here, not scattered in dashboard/app.py.
-API_BASE_URL = "http://127.0.0.1:8000"   # where `uvicorn api.main:app` is served
+import os as _os
+API_BASE_URL = _os.environ.get("API_BASE_URL", "http://127.0.0.1:8000")
 API_GET_TIMEOUT_SECONDS = 15             # metadata / findings reads are fast
 API_ANALYZE_TIMEOUT_SECONDS = 1800       # a full multi-year run is synchronous & slow
 # Default value for the dashboard's corrected-significance filter: edges with a

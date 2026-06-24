@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: causal-discovery-api
+    runtime: python
+    rootDir: Cross-Asset Causal Discovery Engine
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: CAUSAL_ENGINE_DB
+        value: db/causal_engine.db
