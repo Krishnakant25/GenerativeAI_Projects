@@ -12,6 +12,14 @@ __pycache__/
 *.db
 *.sqlite
 *.sqlite3
+# EXCEPTION — db/causal_engine.db is committed ON PURPOSE as a read-only demo
+# snapshot (the recorded run run_20260619_133653_683874bb: 156 candidates, 106
+# significant, 20 in-graph, 2143 regime windows, 106 LLM hypothesis cards). The
+# hosted demo (DEMO_MODE=true) serves this file read-only because its host has
+# no Ollama and an ephemeral filesystem. This is NOT a policy change to track
+# databases in general — every other *.db stays ignored; only this snapshot is
+# whitelisted so the live demo has data to serve on a fresh clone.
+!db/causal_engine.db
 
 # Local data cache
 data/cache/

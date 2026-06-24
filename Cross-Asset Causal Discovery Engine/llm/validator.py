@@ -536,14 +536,26 @@ def summarize_flags(cards: list[HypothesisCard]) -> dict[str, int]:
     return counts
 
 
+# Liveness probes must FAIL FAST: if no Ollama is listening (e.g. a hosted demo
+# host), we want a quick "unavailable" rather than a hang on the default socket
+# timeout. The probe is a cheap local call, so a couple of seconds is ample.
+OLLAMA_HEALTH_TIMEOUT_SECONDS = 2.0
+
+
 async def ollama_available(
-    host: str = DEFAULT_OLLAMA_HOST, model: str = DEFAULT_MODEL_NAME
+    host: str = DEFAULT_OLLAMA_HOST,
+    model: str = DEFAULT_MODEL_NAME,
+    timeout: float = OLLAMA_HEALTH_TIMEOUT_SECONDS,
 ) -> bool:
     """True if Ollama is reachable and ``model`` is present. Used by the API to
-    degrade gracefully and by tests to gate the live behavioural check."""
+    degrade gracefully and by tests to gate the live behavioural check.
+
+    Fast-fails on ``timeout`` seconds so a nonexistent Ollama (e.g. on a hosted
+    demo host) returns False quickly instead of hanging on a connection attempt.
+    """
     try:
-        resp = await AsyncClient(host=host).list()
-    except Exception:  # noqa: BLE001 - any failure means "not available"
+        resp = await AsyncClient(host=host, timeout=timeout).list()
+    except Exception:  # noqa: BLE001 - any failure (incl. timeout) means "not available"
         return False
     names = {m.get("model") or m.get("name") for m in resp.get("models", [])}
     return model in names

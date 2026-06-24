@@ -21,6 +21,7 @@ Run it (two shells):
 
 from __future__ import annotations
 
+import os
 import sys
 from pathlib import Path
 
@@ -214,15 +215,15 @@ def flag_badge_html(flag: str) -> str:
 # Sidebar — connection, run control, load, metadata, filters.
 # ===========================================================================
 
-def render_sidebar(client: CausalAPIClient) -> dict:
+def render_sidebar(client: CausalAPIClient, demo_mode: bool = False) -> dict:
     """Render the whole sidebar; return the active filter selections."""
     st.sidebar.title("⚙️ Controls")
 
     api_ok = _render_connection(client)
-    _render_run_control(client, api_ok)
+    _render_run_control(client, api_ok, demo_mode)
     _render_load_existing(client, api_ok)
     _render_run_metadata(client)
-    _render_layer2_control(client, api_ok)
+    _render_layer2_control(client, api_ok, demo_mode)
     return _render_filters(client)
 
 
@@ -240,7 +241,20 @@ def _render_connection(client: CausalAPIClient) -> bool:
     return True
 
 
-def _render_run_control(client: CausalAPIClient, api_ok: bool) -> None:
+def _render_run_control(
+    client: CausalAPIClient, api_ok: bool, demo_mode: bool = False
+) -> None:
+    if demo_mode:
+        # Read-only hosted demo: there is no writable pipeline on the host, so
+        # the run-control form is replaced by a clear note rather than shown
+        # with a button that would only ever return a 503.
+        with st.sidebar.expander("▶️ Run a new analysis", expanded=False):
+            st.info(
+                "**Demo mode: showing the pre-recorded run only.** Running a "
+                "fresh analysis is disabled on the hosted demo — clone the repo "
+                "and run it locally (see README) to analyse a live window."
+            )
+        return
     with st.sidebar.expander("▶️ Run a new analysis", expanded=False):
         st.caption(
             "Runs the full pipeline over all 13 assets. This is **synchronous "
@@ -377,11 +391,14 @@ def _render_run_metadata(client: CausalAPIClient) -> None:
     col3.metric("Significant", n_sig)
 
 
-def _render_layer2_control(client: CausalAPIClient, api_ok: bool) -> None:
+def _render_layer2_control(
+    client: CausalAPIClient, api_ok: bool, demo_mode: bool = False
+) -> None:
     """Ollama health + a (slow) on-demand validation trigger for the loaded run.
 
-    Degrades gracefully: if Ollama is unreachable the action is disabled with a
-    clear message, never a stack trace."""
+    Degrades gracefully: if Ollama is unreachable (or in read-only demo mode)
+    the *generate* action is disabled with a clear message, never a stack trace.
+    Reading the pre-generated cards always works."""
     with st.sidebar.expander("🧠 Layer 2 (LLM plausibility)", expanded=False):
         run_id = st.session_state.get("run_id")
         # Ollama liveness badge.
@@ -392,7 +409,13 @@ def _render_layer2_control(client: CausalAPIClient, api_ok: bool) -> None:
             except APIError as exc:
                 st.caption(f"Could not check the model: {exc}")
         ollama_up = bool(health and health.get("ollama_available"))
-        if health is None:
+        if demo_mode:
+            st.info(
+                "**Demo mode:** card *generation* is disabled (the hosted demo "
+                "has no local LLM). The pre-recorded run's hypothesis cards are "
+                "already loaded — browse them in the **🧠 Hypothesis cards** tab."
+            )
+        elif health is None:
             st.warning("LLM status unknown (API offline).")
         elif ollama_up:
             st.success(f"🟢 Ollama online · `{health.get('model_name','?')}`")
@@ -414,7 +437,7 @@ def _render_layer2_control(client: CausalAPIClient, api_ok: bool) -> None:
             help="A local 8B model takes ~1 min per candidate, so cap it for "
                  "interactive use. The recorded results/ run validated all 106.",
         )
-        disabled = not (api_ok and ollama_up and run_id)
+        disabled = demo_mode or not (api_ok and ollama_up and run_id)
         if st.button("Generate hypothesis cards", disabled=disabled):
             with st.spinner(
                 f"Validating up to {int(n_cap)} candidates — ~1 min each…"
@@ -1233,8 +1256,14 @@ def render_flip_event(ev: dict) -> None:
     st.divider()
 
 
-def view_events(client: CausalAPIClient) -> None:
+def view_events(client: CausalAPIClient, demo_mode: bool = False) -> None:
     st.subheader("Regime-flip events")
+    if demo_mode:
+        st.caption(
+            "🔭 Demo mode: this feed is read-only. The pre-recorded analysis run "
+            "has no flips of its own (flips are diffs *between* monitor runs); "
+            "triggering a live monitor cycle requires running the engine locally."
+        )
     st.warning(
         "🚨 **Flips are detected against *historical* data and can be reverted by "
         "data revisions.** yfinance can restate the most recent bars after the "
@@ -1253,6 +1282,16 @@ def view_events(client: CausalAPIClient) -> None:
         return
 
     if not flips:
+        if demo_mode:
+            st.info(
+                "No regime-flip events in the pre-recorded run shown by this "
+                "demo. Flips are diffs *between* successive monitor runs, which "
+                "the hosted read-only demo does not run. Clone the repo and run "
+                "`python -m scripts.run_monitor` locally (twice or more) to "
+                "populate this feed — see the README for the recorded "
+                "4-snapshot validation (10 confirmed + 28 pending flips)."
+            )
+            return
         st.info(
             "No regime-flip events recorded yet. The monitor populates this feed "
             "by diffing successive runs: run `python -m scripts.run_monitor` (or "
@@ -1316,6 +1355,32 @@ def view_events(client: CausalAPIClient) -> None:
 # App shell.
 # ===========================================================================
 
+def is_demo_mode(client: CausalAPIClient) -> bool:
+    """Detect a read-only hosted deployment.
+
+    The API's ``/health`` is the single source of truth (so detection works no
+    matter where the dashboard itself is deployed — e.g. Streamlit Cloud talking
+    to a Render API). Falls back to a local ``DEMO_MODE`` env var if the API
+    can't be reached, so the banner still shows during a brief API outage."""
+    try:
+        health = client.health()
+        if isinstance(health, dict) and "demo_mode" in health:
+            return bool(health["demo_mode"])
+    except APIError:
+        pass
+    return os.environ.get("DEMO_MODE", "").strip().lower() in {"1", "true", "yes", "on"}
+
+
+def render_demo_banner() -> None:
+    """Prominent top-of-page banner for the hosted read-only demo."""
+    st.info(
+        "Live read-only demo — showing a pre-recorded 8-year analysis. The "
+        "local-LLM layer and live monitoring require running this locally "
+        "(see README).",
+        icon="🔭",
+    )
+
+
 def render_disclaimer() -> None:
     st.error(
         "**Read this first.** Granger causality measures *predictive "
@@ -1344,10 +1409,14 @@ def main() -> None:
         "Statistical causal discovery (Layer 1) + LLM plausibility / mechanism "
         "explanation (Layer 2). A thin client over the FastAPI service."
     )
-    render_disclaimer()
 
     client = CausalAPIClient()
-    filters = render_sidebar(client)
+    demo_mode = is_demo_mode(client)
+    if demo_mode:
+        render_demo_banner()
+    render_disclaimer()
+
+    filters = render_sidebar(client, demo_mode)
 
     run_id = st.session_state.get("run_id")
     if not run_id:
@@ -1373,7 +1442,7 @@ def main() -> None:
     with usecase_tab:
         view_business_use_cases(client, run_id)
     with events_tab:
-        view_events(client)
+        view_events(client, demo_mode)
 
 
 # ``streamlit run dashboard/app.py`` executes this module as __main__.

@@ -111,6 +111,28 @@ DB_PATH = Path(__file__).resolve().parent / "db" / "causal_engine.db"
 # FastAPI service over HTTP so the API stays the single source of truth. Every
 # hardcoded dashboard parameter lives here, not scattered in dashboard/app.py.
 import os as _os
+
+
+def _env_flag(name: str, default: bool = False) -> bool:
+    """Parse a boolean-ish environment variable ('1'/'true'/'yes'/'on')."""
+    raw = _os.environ.get(name)
+    if raw is None:
+        return default
+    return raw.strip().lower() in {"1", "true", "yes", "on"}
+
+
+# --- Demo / read-only deployment mode --------------------------------------
+# DEMO_MODE turns the service into a READ-ONLY snapshot server. Set
+# DEMO_MODE=true on a hosted deployment (e.g. Render free tier) that has NO
+# Ollama instance and an ephemeral filesystem: the API then serves the
+# pre-recorded run committed in db/causal_engine.db and refuses the endpoints
+# that would try to run the (network-bound, LLM-dependent, filesystem-writing)
+# pipeline — POST /analyze, POST /runs/{id}/validate, POST /monitor — with a
+# clear 503 instead of hanging or erroring. All GET endpoints (candidates,
+# graph, regimes, cards, flips) keep working against the committed snapshot.
+# Defaults to False so nothing changes for a normal local run.
+DEMO_MODE = _env_flag("DEMO_MODE", default=False)
+
 API_BASE_URL = _os.environ.get("API_BASE_URL", "http://127.0.0.1:8000")
 API_GET_TIMEOUT_SECONDS = 15             # metadata / findings reads are fast
 API_ANALYZE_TIMEOUT_SECONDS = 1800       # a full multi-year run is synchronous & slow

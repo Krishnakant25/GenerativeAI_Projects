@@ -348,3 +348,72 @@ def test_monitor_endpoint_runs_cycle(client, monkeypatch):
     assert body["run_id"] == "run_mon_1"
     assert body["n_flips_touched"] == 0
     assert body["n_significant_candidates"] == 1
+
+
+# --------------------------------------------------------------------------
+# Read-only demo mode (hosted deployment, no Ollama, ephemeral filesystem)
+# --------------------------------------------------------------------------
+
+
+def test_demo_mode_gates_writes_but_serves_reads(client, monkeypatch):
+    """With DEMO_MODE on, the pipeline/LLM-triggering endpoints return a clear
+    503 while every GET keeps serving the pre-populated snapshot, and
+    /llm/health degrades to unavailable without hanging."""
+    c, _, db = client
+    import config
+    from db import storage
+    from llm.models import HypothesisCard, PlausibilityFlag
+
+    # Pre-populate the throwaway DB with a run + one card — this stands in for
+    # the committed db/causal_engine.db demo snapshot.
+    run, candidates, graph_meta = _mock_run()
+    storage.persist_run(run, candidates, graph_meta, db_path=db)
+    sig = candidates[0]
+    card = HypothesisCard(
+        card_id="",
+        candidate=sig,
+        in_graph=True,
+        mechanism_explanation="A pre-recorded explanation.",
+        mechanism_channel=None,
+        plausibility_flag=PlausibilityFlag.LIKELY_SPURIOUS,
+        llm_confidence=0.5,
+        caveats=["pre-recorded"],
+        addresses_pc_rejection=False,
+        model_name="test-model",
+        raw_response="{}",
+    )
+    storage.replace_hypothesis_cards("run_test", [card], db_path=db)
+
+    # Flip demo mode on at request time (independent of import order / env).
+    monkeypatch.setattr(config, "DEMO_MODE", True)
+
+    # Pipeline / LLM / monitor endpoints are gated with an explanatory 503.
+    gated = {
+        "POST /analyze": c.post("/analyze", json={}),
+        "POST /validate": c.post("/runs/run_test/validate"),
+        "POST /monitor": c.post("/monitor", json={}),
+    }
+    for label, resp in gated.items():
+        assert resp.status_code == 503, f"{label} should be 503 in demo mode"
+        detail = resp.json()["detail"].lower()
+        assert "demo" in detail and "locally" in detail, label
+
+    # Reads still work normally against the pre-populated DB.
+    assert c.get("/runs/run_test/candidates").status_code == 200
+    assert c.get("/runs/run_test/graph").status_code == 200
+    assert c.get("/runs/run_test/regimes").status_code == 200
+    cards_resp = c.get("/runs/run_test/cards")
+    assert cards_resp.status_code == 200
+    cards = cards_resp.json()
+    assert len(cards) == 1
+    # Hard rule survives demo mode: the card still carries its statistic.
+    assert cards[0]["candidate"]["corrected_p_value"] is not None
+
+    # /llm/health degrades cleanly to unavailable (no connection attempt/hang).
+    health = c.get("/llm/health")
+    assert health.status_code == 200
+    assert health.json()["ollama_available"] is False
+
+    # /health advertises demo mode so a client (the dashboard) can detect it.
+    h = c.get("/health")
+    assert h.status_code == 200 and h.json()["demo_mode"] is True

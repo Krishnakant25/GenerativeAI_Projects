@@ -54,6 +54,25 @@ from llm.validator import (
 
 logger = logging.getLogger("causal_engine.api")
 
+# Surfaced (as a 503) by the pipeline/LLM-triggering endpoints when the service
+# is running as a read-only hosted demo (config.DEMO_MODE). See config.DEMO_MODE.
+DEMO_DISABLED_DETAIL = (
+    "This endpoint requires a local Ollama instance and a writable pipeline, "
+    "which are not available in the hosted read-only demo. The demo serves a "
+    "pre-recorded analysis run only. Clone the repo and run it locally (see "
+    "README / DEPLOYMENT.md) to run a fresh analysis, generate hypothesis "
+    "cards, or trigger a monitor cycle."
+)
+
+
+def _guard_demo_mode() -> None:
+    """Reject pipeline/LLM-triggering endpoints with a clear 503 when the
+    service is configured as a read-only demo. Read endpoints never call this —
+    they serve the committed snapshot unchanged."""
+    if config.DEMO_MODE:
+        raise HTTPException(status_code=503, detail=DEMO_DISABLED_DETAIL)
+
+
 API_DESCRIPTION = (
     "Surfaces **candidate** causal relationships across a fixed cross-asset "
     "universe (commodities, FX, equity indices, rates, sector ETFs).\n\n"
@@ -147,7 +166,9 @@ app = FastAPI(
 
 @app.get("/health", tags=["meta"])
 def health(db_path: Path = Depends(get_db_path)) -> dict:
-    """Liveness + DB-reachability check."""
+    """Liveness + DB-reachability check. ``demo_mode`` lets a client (e.g. the
+    dashboard) reliably detect a read-only hosted deployment regardless of where
+    the client itself is running."""
     try:
         conn = storage.get_connection(db_path)
         try:
@@ -158,7 +179,11 @@ def health(db_path: Path = Depends(get_db_path)) -> dict:
     except Exception:  # noqa: BLE001 - report degraded rather than crash
         logger.exception("Health check could not reach the database")
         db_ok = False
-    return {"status": "ok" if db_ok else "degraded", "database": db_ok}
+    return {
+        "status": "ok" if db_ok else "degraded",
+        "database": db_ok,
+        "demo_mode": config.DEMO_MODE,
+    }
 
 
 # --------------------------------------------------------------------------
@@ -176,7 +201,10 @@ def analyze(
     fetch -> preprocess -> Granger -> correction -> PC graph -> regimes.
     Returns the run metadata (including ``run_id``); fetch the findings via the
     ``/runs/{run_id}/...`` endpoints.
+
+    Disabled with a clear **503** in read-only demo mode (``DEMO_MODE``).
     """
+    _guard_demo_mode()
     req = request or AnalyzeRequest()
 
     # Cheap up-front validation so an obviously bad window fails as 400, not 500.
@@ -304,7 +332,13 @@ def get_regimes(
 @app.get("/llm/health", response_model=LLMHealth, tags=["layer2"])
 async def llm_health() -> LLMHealth:
     """Is the local Ollama model reachable? Lets clients disable the (slow)
-    validate action and show a clear status instead of failing mid-request."""
+    validate action and show a clear status instead of failing mid-request.
+
+    In read-only demo mode there is no Ollama on the host, so this returns
+    ``ollama_available: false`` immediately without attempting a connection
+    (no hang). Otherwise ``ollama_available`` fast-fails on a short timeout."""
+    if config.DEMO_MODE:
+        return LLMHealth(ollama_available=False, model_name=DEFAULT_MODEL_NAME)
     available = await ollama_available(model=DEFAULT_MODEL_NAME)
     return LLMHealth(ollama_available=available, model_name=DEFAULT_MODEL_NAME)
 
@@ -333,8 +367,11 @@ async def validate_run_endpoint(
     The LLM only *explains* and *rates plausibility* — it never re-tests or
     upgrades a finding to causal, and the underlying statistic passes through
     untouched. Degrades to **503** (clear message) if Ollama is unreachable,
-    never a 500 traceback.
+    never a 500 traceback. Disabled outright with a 503 in read-only demo mode
+    (``DEMO_MODE``) — the host has no Ollama; read already-generated cards via
+    ``GET /runs/{id}/cards`` instead.
     """
+    _guard_demo_mode()
     _require_run(run_id, db_path)
 
     validator = OllamaValidator()
@@ -421,7 +458,12 @@ def run_monitor(
     client trigger one now. SLOW: it runs the full network-bound Layer-1 pipeline
     synchronously. The first ever cycle only establishes a baseline (no prior run
     to diff), so it returns zero flips — that is expected, not an error.
+
+    Disabled with a clear **503** in read-only demo mode (``DEMO_MODE``): the
+    hosted demo never runs a fresh pipeline. Read recorded flips via ``GET
+    /flips``.
     """
+    _guard_demo_mode()
     req = request or AnalyzeRequest()
     try:
         touched = run_monitor_cycle(
