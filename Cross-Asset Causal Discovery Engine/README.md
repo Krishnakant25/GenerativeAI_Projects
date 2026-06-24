@@ -705,16 +705,20 @@ Orchestrated in `causal/pipeline.py`, persisted via `db/storage.py` (SQLite),
 served by `api/main.py` (FastAPI), explored in `dashboard/app.py` (Streamlit, a
 thin HTTP client over the API).
 
-**Layer 2 — LLM Validation & Explanation** *(Phase 2 — deferred, stubs only)*
-A local LLM (Ollama + `llama3.1:8b-instruct-q4_0`) will propose the economic
-mechanism for each candidate, judge plausibility and flag confidence →
-`HypothesisCard`. The `hypothesis_cards` table and the `llm/` contract exist but
-stay empty until the model is pulled. **No LLM code runs in Phase 1.**
+**Layer 2 — LLM Plausibility & Explanation** *(Phase 2 — built & running)*
+A local LLM (Ollama + `llama3.1:8b-instruct-q4_0`) proposes the economic
+mechanism for each candidate, judges plausibility and flags confidence →
+`HypothesisCard`. The `hypothesis_cards` table is populated, the `llm/` modules
+(`models.py`, `prompts.py`, `validator.py`) are all implemented, and the layer
+ran over all **106** surviving candidates of the recorded run. Full findings —
+including the mechanism-hallucination fix and the spurious-control probe — are in
+the [Layer 2 section](#layer-2--llm-plausibility--explanation-built).
 
-**Layer 3 — Dashboard** *(Phase 1 views built)*
+**Layer 3 — Dashboard** *(built — Phase 1 views + the live Phase 2 card feed)*
 Causal-graph view (`streamlit-agraph`), regime timeline (Altair, fed Polars
 frames), and interactive node/edge exploration over the raw statistics. The
-hypothesis-card feed and business use-case panel are Phase 2.
+hypothesis-card feed (the Phase 2 feature) and business use-case panel are live
+and rendered from the persisted cards.
 
 ### Tech stack (actual installed versions)
 
@@ -772,10 +776,11 @@ transitive lockfile in [`requirements.lock.txt`](requirements.lock.txt).
   the multiple-comparisons dependence above all remain. The graph layer's
   rejection of the single strongest candidate (`^TNX → JPY=X`) is a concrete
   reminder that one extreme test is not a finding.
-- **LLM rationalization (Phase 2).** The plausibility layer will be able to
-  produce a convincing economic story for a purely spurious correlation. Its
-  output is a triage aid for a human, not a verdict. Named now so it is a
-  documented design decision, not a later surprise.
+- **LLM rationalization (Layer 2, built).** The plausibility layer can produce a
+  convincing economic story for a purely spurious correlation. Its output is a
+  triage aid for a human, not a verdict. This is the named, designed-for risk of
+  the layer — tested with a deliberate spurious-control probe (see the
+  [Layer 2 section](#layer-2--llm-plausibility--explanation-built)), not hoped away.
 - **Not a trading system.** No position sizing, no execution, no backtest of
   returns. Lead-lag precedence is not a profit guarantee.
 
@@ -895,7 +900,7 @@ Cross-Asset Causal Discovery Engine/
 │                             #          /validate, /flips, /monitor, /health, /llm/health
 ├── dashboard/   app.py, api_client.py   # Streamlit thin client over the API
 ├── db/          storage.py   # SQLite: analysis_runs, causal_candidates, hypothesis_cards
-├── llm/         models.py, prompts.py, validator.py   # Phase 2 stubs (HypothesisCard contract)
+├── llm/         models.py, prompts.py, validator.py   # Layer 2 (built): HypothesisCard, prompts, mismatch backstop
 ├── scripts/     verify_tickers.py, record_validation_run.py, run_replication_study.py,
 │                run_monitor.py + diagnose_label_switching.py (Phase 3)
 ├── tests/       test_{granger,correction,graph_discovery,preprocessor,regime_detection,

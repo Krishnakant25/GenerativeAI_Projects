@@ -1,8 +1,9 @@
-﻿============================= test session starts =============================
+============================= test session starts =============================
 platform win32 -- Python 3.11.9, pytest-9.1.0, pluggy-1.6.0 -- D:\GenAI_udemy\Git_Projects\Cross-Asset Causal Discovery Engine\venv\Scripts\python.exe
 cachedir: .pytest_cache
 rootdir: D:\GenAI_udemy\Git_Projects\Cross-Asset Causal Discovery Engine
 configfile: pytest.ini
+testpaths: tests
 plugins: anyio-4.14.0
 collecting ... collected 62 items
 
@@ -69,4 +70,4 @@ tests/test_replication.py::test_same_direction_required_and_missing_holdout_hand
 tests/test_replication.py::test_summary_buckets_pc_vs_granger_only PASSED [ 98%]
 tests/test_replication.py::test_empty_category_rate_is_none_not_zero PASSED [100%]
 
-======================== 62 passed in 79.48s (0:01:19) ========================
+======================== 62 passed in 97.34s (0:01:37) ========================
