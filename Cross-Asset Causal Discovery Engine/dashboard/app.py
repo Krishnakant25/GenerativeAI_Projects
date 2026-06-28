@@ -654,9 +654,34 @@ def view_causal_graph(client: CausalAPIClient, run_id: str, filters: dict) -> No
         highlightColor="#FFD166",
         collapsible=False,
     )
+    # Spread the 13 nodes out so the dense centre cluster (Energy/Crude/Equity/
+    # Airlines/Financials) doesn't pile its labels on top of each other. The
+    # default barnesHut tuning packs nodes too tightly for readable labels, so
+    # we strengthen repulsion, lengthen the springs, and forbid overlap. vis.js
+    # reads whatever we put on cfg.physics directly as its network physics opts.
+    cfg.physics = {
+        "enabled": True,
+        "solver": "barnesHut",
+        "barnesHut": {
+            "gravitationalConstant": -14000,  # stronger node-node repulsion
+            "centralGravity": 0.12,           # weaker pull to centre = less clumping
+            "springLength": 230,              # longer edges = more breathing room
+            "springConstant": 0.02,
+            "damping": 0.4,
+            "avoidOverlap": 1,                # hard-stop nodes sitting on each other
+        },
+        "minVelocity": 0.75,
+        "stabilization": {"enabled": True, "iterations": 400, "fit": True},
+    }
+    # vis.js leaves dragNodes on by default, so a viewer can also nudge any two
+    # nodes apart by hand while recording — surfaced as a tip in the caption.
     graph_col, legend_col = st.columns([3, 1])
     with graph_col:
         clicked = agraph(nodes=nodes, edges=edges, config=cfg)
+        st.caption(
+            "💡 Tip: nodes are draggable — click-drag any node to fine-tune "
+            "spacing before a screenshot."
+        )
     with legend_col:
         render_graph_legend()
 
@@ -775,8 +800,8 @@ def _candidates_to_df(rows: list[dict]) -> pl.DataFrame:
                 "Driver": asset_name(c["asset_a"]),
                 "Affected": asset_name(c["asset_b"]),
                 "Lag (d)": c["lag"],
-                "Corrected p": c["corrected_p_value"],
-                "Raw p": c["granger_p_value"],
+                "Corrected p": fmt_p(c["corrected_p_value"]),
+                "Raw p": fmt_p(c["granger_p_value"]),
                 "Correlation": c["correlation_strength"],
                 "Confidence": c["statistical_confidence"],
                 "Significant": c["is_significant"],
@@ -1087,7 +1112,7 @@ def view_business_use_cases(client: CausalAPIClient, run_id: str) -> None:
                 "Affected": asset_name(card_pair(c)[1]),
                 "Lead (days)": c["candidate"].get("lag"),
                 "Channel": c.get("mechanism_channel") or "—",
-                "Corrected p": c["candidate"].get("corrected_p_value"),
+                "Corrected p": fmt_p(c["candidate"].get("corrected_p_value")),
                 "LLM conf.": c.get("llm_confidence"),
             }
             for c in timing[:10]
@@ -1143,7 +1168,7 @@ def view_business_use_cases(client: CausalAPIClient, run_id: str) -> None:
                 [
                     {
                         "Relationship": pair_label(*card_pair(c)),
-                        "Corrected p": c["candidate"].get("corrected_p_value"),
+                        "Corrected p": fmt_p(c["candidate"].get("corrected_p_value")),
                         "In PC graph": c.get("in_graph"),
                         "LLM note": (c.get("caveats") or ["—"])[0],
                     }
@@ -1180,7 +1205,7 @@ def view_business_use_cases(client: CausalAPIClient, run_id: str) -> None:
                         "Plausibility": FLAG_STYLE.get(
                             c.get("plausibility_flag"), FLAG_STYLE["parse_failed"]
                         )["label"],
-                        "Corrected p": c["candidate"].get("corrected_p_value"),
+                        "Corrected p": fmt_p(c["candidate"].get("corrected_p_value")),
                     }
                     for c in switchy[:10]
                 ]
