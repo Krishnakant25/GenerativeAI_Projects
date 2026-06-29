@@ -1,0 +1,33 @@
+C:\Users\Krishna Kant Sahu\AppData\Local\Programs\Python\Python311\Lib\site-packages\langgraph\cache\base\__init__.py:8: LangChainPendingDeprecationWarning: The default value of `allowed_objects` will change in a future version. Pass an explicit value (e.g., allowed_objects='messages' or allowed_objects='core') to suppress this warning.
+  from langgraph.checkpoint.serde.jsonplus import JsonPlusSerializer
+INFO:     Started server process [4768]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:62425 - "POST /tasks HTTP/1.1" 200 OK
+click_text('Anthropic funding') failed: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_text("Anthropic funding").first
+
+INFO:     127.0.0.1:53012 - "POST /tasks HTTP/1.1" 200 OK
+click_text('Anthropic funding') failed: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_text("Anthropic funding").first
+
+click_text('Anthropic funding') failed: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_text("Anthropic funding").first
+
+click_text('Anthropic funding') failed: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_text("Anthropic funding").first
+
+click_text('Anthropic funding') failed: Locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for get_by_text("Anthropic funding").first
+
+verify_node: max steps 5 reached — terminating with partial report
+INFO:     127.0.0.1:53712 - "GET /tasks/9923b508-f128-4a0d-b627-1a4da5ce5d1c HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62033 - "GET /tasks/9923b508-f128-4a0d-b627-1a4da5ce5d1c/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62037 - "GET /tasks/9923b508-f128-4a0d-b627-1a4da5ce5d1c/trace HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62046 - "GET /tasks/9923b508-f128-4a0d-b627-1a4da5ce5d1c/report HTTP/1.1" 200 OK
